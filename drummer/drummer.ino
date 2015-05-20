@@ -8,16 +8,13 @@ Servo rightArmServo;  // create servo object to control a servo
 Servo leftArmServo;  // create servo object to control a servo 
                 // a maximum of eight servo objects can be created  
                 
-Servo headServo;
   
 ThreadController threadController = ThreadController();              
 int rightArmPos = 0;    // variable to store the servo rightArmPosition 
 int leftArmPos = 0;
-int headDirection = 0;
 
 Thread* rightArmThread = new Thread();
 Thread* leftArmThread = new Thread();
-Thread* headThread = new Thread();
 
 void setup() 
 { 
@@ -25,9 +22,6 @@ void setup()
   
   rightArmServo.attach(9);  // attaches the servo on pin 9 to the servo object 
   leftArmServo.attach(10);
-  headServo.attach(11);
-  
-  headServo.write(90);
   
   rightArmThread->onRun(rightArmCallback);
   rightArmThread->setInterval(100);
@@ -35,12 +29,8 @@ void setup()
   leftArmThread->onRun(leftArmCallback);
   leftArmThread->setInterval(100);
   
-  headThread->onRun(headCallback);
-  headThread->setInterval(300);
-  
   threadController.add(rightArmThread);
   threadController.add(leftArmThread);
-  threadController.add(headThread);
 } 
  
 void loop() 
@@ -49,20 +39,11 @@ void loop()
 }
 
 void rightArmCallback() {
-  moveArm(rightArmPos, rightArmServo, 10, 0, 30);
+  moveArm(rightArmPos, rightArmServo, 3, 0, 30);
 }
 
 void leftArmCallback() {
   moveArm(leftArmPos, leftArmServo, 5, 90, 100);
-}
-
-void headCallback() {
-  if (headDirection == 180) {
-      headDirection = 0;
-  } else {
-      headDirection = 180;
-  }
-  headServo.write(headDirection);
 }
  
 void moveArm(int armPosition, Servo armServo, int delayMillis, int startPosition, int endPosition) {
