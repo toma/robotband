@@ -3,7 +3,7 @@
 #include "Musician.h"
 #endif
 
-class LightMan : public Musician {
+class AxeMan : public Musician {
   public:
     void setup();
     void setState(unsigned char state[2]);

@@ -11,7 +11,7 @@ void setup()
   musician->setup();
 } 
  
-void loop() 
+void loop()
 { 
   unsigned char* stateSet = pianoRoll.getStateSet();
   musician->setState(stateSet);
