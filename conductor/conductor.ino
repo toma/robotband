@@ -1,21 +1,20 @@
 #include "PianoRoll.h"
-#include "LightMan.h"
+#include "Musician.h"
 
 PianoRoll pianoRoll;
-LightMan musician;
+Musician* musician;
 
 void setup() 
 {
-  // String musicianName = pianoRoll.getMusician();
-  // if (musicianName == MusicianNames.LIGHT_MAN) {
-    musician.setup();
-  // }
+  int musicianType = pianoRoll.getMusicianType();
+  musician = Musician::makeMusician(musicianType);
+  musician->setup();
 } 
  
 void loop() 
 { 
   unsigned char* stateSet = pianoRoll.getStateSet();
-  musician.setState(stateSet);
+  musician->setState(stateSet);
   delete[] stateSet;
   delay(pianoRoll.getDelay());
   pianoRoll.nextLine();

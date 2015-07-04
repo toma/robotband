@@ -1,7 +1,16 @@
 #include "PianoRoll.h"
 #include <Arduino.h>
 
+// Musician Types
+const int LightMan = 0;
+const int Drummer = 1;
+const int AxeMan = 2;
+
 int currentPhrase = 0;
+
+int PianoRoll::getMusicianType(){
+  return LightMan;
+}
 
 int PianoRoll::getDelay() {
   // delay = file.get_delay

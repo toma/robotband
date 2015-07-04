@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "LightMan.h"
+
 // PIN CONFIGURATION
 const unsigned char leftLightPin = 9;
 const unsigned char rightLightPin = 10;
@@ -16,14 +17,15 @@ void LightMan::setup()
  
 void LightMan::setState(unsigned char state[2]) 
 { 
-  setLightState(leftLightPin, state[leftLightKey]);
-  setLightState(rightLightPin, state[rightLightKey]);
-}
-
-void LightMan::setLightState(unsigned char pin, unsigned char lightState) {
-  if (lightState == 1) {
-    digitalWrite(pin, HIGH);
+  if (state[leftLightKey] == 1) {
+    digitalWrite(leftLightPin, HIGH);
   } else {
-    digitalWrite(pin, LOW);
+    digitalWrite(leftLightPin, LOW);
+  }
+
+  if (state[rightLightKey] == 1) {
+    digitalWrite(rightLightPin, HIGH);
+  } else {
+    digitalWrite(rightLightPin, LOW);
   }
 }

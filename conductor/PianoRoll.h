@@ -6,6 +6,7 @@
 class PianoRoll {
   public: 
     int getDelay();
+    int getMusicianType();
     unsigned char* getStateSet();
     void nextLine();
 };
