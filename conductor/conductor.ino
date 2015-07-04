@@ -3,7 +3,6 @@
 
 PianoRoll pianoRoll;
 LightMan musician;
-unsigned char states[] = {0,1};
 
 void setup() 
 {
@@ -15,17 +14,9 @@ void setup()
  
 void loop() 
 { 
-  //fuck you C++
-  if (states[0] == 0){
-    states[0] = 1;
-    states[1] = 0;
-  } else {
-    states[0] = 0;
-    states[1] = 1;
-  }
-
-  // unsigned char = pianoRoll.getStateSet();
-  musician.setState(states);
+  unsigned char* stateSet = pianoRoll.getStateSet();
+  musician.setState(stateSet);
+  delete[] stateSet;
   delay(pianoRoll.getDelay());
-  // pianoRoll.nextLine();
+  pianoRoll.nextLine();
 }
