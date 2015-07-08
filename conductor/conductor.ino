@@ -1,11 +1,13 @@
 #include "PianoRoll.h"
 #include "Musician.h"
+#include <Servo.h>
 
 PianoRoll pianoRoll;
 Musician* musician;
 
 void setup() 
 {
+  Serial.begin(9600); // For debugging
   int musicianType = pianoRoll.getMusicianType();
   musician = Musician::makeMusician(musicianType);
   musician->setup();
