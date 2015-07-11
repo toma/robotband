@@ -7,8 +7,13 @@ const int AxeMan = 1;
 const int Drummer = 2;
 
 // const unsigned char testRightArm[] = {255,255,255,255,16,0,0,16,0,0,16,0,0,0,0,0,0,16,0,16,0,0,16,0,16,0,0,0};
-const unsigned char testRightArm[] = {255,255,255,255,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8};
-const unsigned char testLeftArm[] = {8,8,4,4,4,4,8,8,4,4,4,4};
+const unsigned char testRightArm[] = {255,255,255,255,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8};
+
+// Shred you litter little mother fucker
+// const unsigned char testRightArm[] = {255,255,255,255,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16}; 
+
+const unsigned char testLeftArm[] = {1,1,1,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,24,24};
+// const unsigned char testLeftArm[] = {7,7,7,7,7,7,9,9,7,7,7,7,5,5,9,9,7,7,7,7,7,5,5,7,7,7,7,7};
 
 int currentPhrase = 0;
 
@@ -23,6 +28,7 @@ int PianoRoll::getDelay() {
 
   // int bpm = 60;
   // int delay = (1000 * bpm)/(60*8);
+  // int delay = 100;
   int delay = 100;
   return delay;
 }
@@ -51,7 +57,7 @@ unsigned char* PianoRoll::getStateSet() {
 }
 
 void PianoRoll::nextLine() {
-  if (currentPhrase == 20) {
+  if (currentPhrase == 28) {
     currentPhrase = 0;
     return;
   }
