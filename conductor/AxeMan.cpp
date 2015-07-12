@@ -38,6 +38,9 @@ Servo leftArmServo;
 
 void AxeMan::setup() 
 { 
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  
   leftArmServo.attach(leftArmPin);
   rightArmServo.attach(rightArmPin);
 }

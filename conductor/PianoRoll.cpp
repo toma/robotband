@@ -1,65 +1,115 @@
 #include "PianoRoll.h"
 #include <Arduino.h>
+#include <SD.h>
+#include <SPI.h>
+#include <math.h>
 
 // Musician Types
+const int Unknown = -1;
 const int LightMan = 0;
 const int AxeMan = 1;
 const int Drummer = 2;
 
-// const unsigned char testRightArm[] = {255,255,255,255,16,0,0,16,0,0,16,0,0,0,0,0,0,16,0,16,0,0,16,0,16,0,0,0};
-const unsigned char testRightArm[] = {255,255,255,255,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8};
+int loopBPM = 100;
+unsigned char rightArmMovement = 255;
+unsigned char leftArmMovement = 7;
 
-// Shred you litter little mother fucker
-// const unsigned char testRightArm[] = {255,255,255,255,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16}; 
+char inputChar;
+String parsedBPM;
+String parsedRightArm;
+String parsedLeftArm;
+unsigned char index = 0;
 
-const unsigned char testLeftArm[] = {1,1,1,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,21,22,23,24,24,24};
-// const unsigned char testLeftArm[] = {7,7,7,7,7,7,9,9,7,7,7,7,5,5,9,9,7,7,7,7,7,5,5,7,7,7,7,7};
+static unsigned char states[2];
 
-int currentPhrase = 0;
+bool hasMoreRows = true;
+
+File instructionFile;
+//TODO: Eventually we need to read from setlist.csv to get the order of songs to play
+
+void PianoRoll::initSD() {
+  pinMode(10, OUTPUT);
+  SD.begin(4);
+
+  //TODO: Needs to happen elsewhere
+  if (SD.exists("SONG1.CSV")) {
+    Serial.println("Loading song SONG1.CSV");
+    instructionFile = SD.open("SONG1.CSV", FILE_READ);
+  } else {
+    Serial.println("File SONG1.CSV not found!");
+  }
+}
 
 int PianoRoll::getMusicianType(){
-  return AxeMan;
+  
+  //Read from musician.csv
+  if (SD.exists("MUSICIAN.CSV")) {
+    File musicianFile = SD.open("MUSICIAN.CSV", FILE_READ);
+    String musicianName = musicianFile.readStringUntil('\n');
+    Serial.println("Initializing Musician: " + musicianName);
+    if (musicianName.equals("AxeMan")) {
+      return AxeMan;  
+    } else if (musicianName.equals("LightMan")) {
+      return LightMan;
+    } else if (musicianName.equals("Drummer")) {
+      return Drummer;
+    } else {
+      return Unknown;
+    }
+    musicianFile.close();
+  } else {
+    Serial.println("File MUSICIAN.CSV not found!");
+  }
+}
+
+void PianoRoll::readLine() {
+  
+  if (instructionFile.available() != 0) {
+    inputChar = instructionFile.peek();
+    while (inputChar != '\n') {     
+      inputChar = instructionFile.read();
+      
+      if (index == 0 && inputChar != ',') {
+        parsedBPM += (String) inputChar;
+      } else if (index == 1 && inputChar != ',') {
+        parsedRightArm += (String) inputChar;
+      } else if (index == 2 && inputChar != ',') {
+        parsedLeftArm += (String) inputChar;
+      }
+      
+      if (inputChar == ',') {
+        index++;
+      }
+    }
+    
+    index = 0;
+
+    loopBPM = parsedBPM.toInt();
+    rightArmMovement = parsedRightArm.toInt();
+    leftArmMovement = parsedLeftArm.toInt();
+
+    parsedBPM = "";
+    parsedRightArm = "";
+    parsedLeftArm = "";
+  } else {
+    Serial.println("Song finished");
+    //TODO: Stop moving
+    hasMoreRows = false;
+  }
+}
+
+bool PianoRoll::hasRows() {
+  return hasMoreRows;
 }
 
 int PianoRoll::getDelay() {
-  // delay = file.get_delay
-  // At 60bpm 1 1/16th note is 125ms, this is our shortest strum
-  // At 60bpm 1 1/4 note is 1s, this is our longest strum
-
-  // int bpm = 60;
-  // int delay = (1000 * bpm)/(60*8);
-  // int delay = 100;
-  int delay = 100;
-  return delay;
+  return round(((.25 / loopBPM) * 60) * 1000);
 }
 
 unsigned char* PianoRoll::getStateSet() {
-  static unsigned char states[2];
-  states[0] = testLeftArm[currentPhrase];
-  states[1] = testRightArm[currentPhrase];
-
-  //  Generate some testing data for LightMan
-  // if (currentPhrase % 2 == 0) {
-  //   states[0] = 2;
-  // } else {
-  //   states[0] = 1;
-  // }
-
-  // if (currentPhrase % 2 == 1) {
-  //   states[1] = 2;
-  // } else {
-  //   states[1] = 1;
-  // }
-
-
+  
+  states[0] = rightArmMovement;
+  states[1] = leftArmMovement;
 
   return states;
-}
-
-void PianoRoll::nextLine() {
-  if (currentPhrase == 28) {
-    currentPhrase = 0;
-    return;
-  }
-  currentPhrase++;
 }
