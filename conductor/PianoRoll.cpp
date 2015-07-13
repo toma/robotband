@@ -20,8 +20,6 @@ String parsedRightArm;
 String parsedLeftArm;
 unsigned char index = 0;
 
-static unsigned char states[2];
-
 bool hasMoreRows = true;
 
 File instructionFile;
@@ -107,7 +105,7 @@ int PianoRoll::getDelay() {
 }
 
 unsigned char* PianoRoll::getStateSet() {
-  
+  static unsigned char states[2];
   states[0] = rightArmMovement;
   states[1] = leftArmMovement;
 

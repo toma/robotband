@@ -6,6 +6,7 @@
 
 PianoRoll pianoRoll;
 Musician* musician;
+unsigned char* stateSet;
 
 void setup() 
 {
@@ -22,7 +23,7 @@ void loop()
 { 
   if (pianoRoll.hasRows()) {
     pianoRoll.readLine();
-    unsigned char* stateSet = pianoRoll.getStateSet();
+    stateSet = pianoRoll.getStateSet();
     int loopDelay = pianoRoll.getDelay();
   
     Serial.print("Delay: ");
@@ -31,7 +32,8 @@ void loop()
     Serial.println(stateSet[0]);
     Serial.print("Left Arm: ");
     Serial.println(stateSet[1]);
-    musician->setState(stateSet);
+//    musician->setState(stateSet);
+    musician->setState2(stateSet[0], stateSet[1]);
     
     delay(pianoRoll.getDelay());
   }

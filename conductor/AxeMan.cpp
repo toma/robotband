@@ -45,9 +45,59 @@ void AxeMan::setup()
   rightArmServo.attach(rightArmPin);
 }
 
-void AxeMan::setState(unsigned char state[2]) 
+void AxeMan::setState2(unsigned char rightArmValue, unsigned char leftArmValue) {
+  leftArmPos = (leftArmArc/24) * leftArmValue + ((180-leftArmArc)/2);
+  Serial.print("Left arm pos: ");
+  Serial.println(leftArmPos);
+  leftArmServo.write(leftArmPos);
+
+  if (callsToSkip > 0) { 
+    callsToSkip--;
+    return;
+  }
+
+  // for a quarter note it needs to move one quarter of it's distance in one delay
+  if (rightArmValue == quarterNote) {
+    direction = direction * -1;
+    rightArmPos = (direction * 45) + rotationOffset;
+//    rightArmServo.write(rightArmPos);
+    callsToSkip = 3;
+  }
+  // for an eighth note it needs to move half it's distance in one delay
+  else if (rightArmValue == eighthNote) {
+    direction = direction * -1;
+    rightArmPos = (direction * 30) + rotationOffset;
+//    rightArmServo.write(rightArmPos);
+    callsToSkip = 1;
+  }
+  // for a sixteenth note it needs to move it's full distance in one delay
+  else if (rightArmValue== sixteenthNote) {
+    direction = direction * -1;
+    rightArmPos = (direction * 15) + rotationOffset;
+//    rightArmServo.write(rightArmPos);
+    callsToSkip = 0;
+  }
+  // for a restingState motion it needs to move to the resting state in one delay
+  else if (rightArmValue == restingState) {
+    rightArmPos = 45 + rotationOffset;
+//    rightArmServo.write(rightArmPos);
+    direction = -1;
+    callsToSkip = 0;
+  }
+  else if (rightArmValue == sixteenthRest) {
+    callsToSkip = 0;
+  }
+
+  Serial.print("right arm pos: ");
+  Serial.println(rightArmPos);
+  rightArmServo.write(rightArmPos);  
+}
+
+void AxeMan::setState(unsigned char* state) 
 {
   leftArmPos = (leftArmArc/24) * state[leftArmKey] + ((180-leftArmArc)/2);
+  Serial.print("Left arm pos in axeman: ");
+  Serial.println(leftArmPos);
   leftArmServo.write(leftArmPos);
 
   if (callsToSkip > 0) { 
@@ -59,32 +109,35 @@ void AxeMan::setState(unsigned char state[2])
   if (state[rightArmKey] == quarterNote) {
     direction = direction * -1;
     rightArmPos = (direction * 45) + rotationOffset;
-    rightArmServo.write(rightArmPos);
+//    rightArmServo.write(rightArmPos);
     callsToSkip = 3;
   }
   // for an eighth note it needs to move half it's distance in one delay
   else if (state[rightArmKey] == eighthNote) {
     direction = direction * -1;
     rightArmPos = (direction * 30) + rotationOffset;
-    rightArmServo.write(rightArmPos);
+//    rightArmServo.write(rightArmPos);
     callsToSkip = 1;
   }
   // for a sixteenth note it needs to move it's full distance in one delay
   else if (state[rightArmKey] == sixteenthNote) {
     direction = direction * -1;
     rightArmPos = (direction * 15) + rotationOffset;
-    rightArmServo.write(rightArmPos);
+//    rightArmServo.write(rightArmPos);
     callsToSkip = 0;
   }
   // for a restingState motion it needs to move to the resting state in one delay
   else if (state[rightArmKey] == restingState) {
     rightArmPos = 45 + rotationOffset;
-    rightArmServo.write(rightArmPos);
+//    rightArmServo.write(rightArmPos);
     direction = -1;
     callsToSkip = 0;
   }
   else if (state[rightArmKey] == sixteenthRest) {
-    rightArmServo.write(rightArmPos);
     callsToSkip = 0;
   }
+
+  Serial.print("right arm pos in axeman: ");
+  Serial.println(rightArmPos);
+  rightArmServo.write(rightArmPos);
 }
