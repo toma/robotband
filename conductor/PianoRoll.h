@@ -5,8 +5,10 @@
 
 class PianoRoll {
   public: 
+    void initSD();
     int getDelay();
     int getMusicianType();
     unsigned char* getStateSet();
-    void nextLine();
+    void readLine();
+    bool hasRows();
 };

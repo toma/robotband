@@ -6,5 +6,6 @@
 class LightMan : public Musician {
   public:
     void setup();
-    void setState(unsigned char state[2]);
+    void setState(unsigned char state[]);
+    void setState2(unsigned char value1, unsigned char value2);
 };
