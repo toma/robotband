@@ -20,6 +20,8 @@ String parsedRightArm;
 String parsedLeftArm;
 unsigned char index = 0;
 
+String musicianName = "";
+
 bool hasMoreRows = true;
 
 File instructionFile;
@@ -29,34 +31,50 @@ void PianoRoll::initSD() {
   pinMode(10, OUTPUT);
   SD.begin(4);
 
+  //Use 5, 6 and 7 to determine binary value of musician, 5V into the pin means it's on
+
   //TODO: Needs to happen elsewhere
-  if (SD.exists("SONG1.CSV")) {
-    Serial.println("Loading song SONG1.CSV");
-    instructionFile = SD.open("SONG1.CSV", FILE_READ);
+  String songName = "SONG1.CSV";
+  String songPathString = musicianName + "/" + songName;
+  char songPath[songPathString.length() + 1];
+  songPathString.toCharArray(songPath, songPathString.length() + 1);
+
+  Serial.println(songPath);
+  if (SD.exists(songPath)) {
+    Serial.println("Loading song " + songPathString);
+    instructionFile = SD.open(songPath, FILE_READ);
   } else {
-    Serial.println("File SONG1.CSV not found!");
+    Serial.println("File " + songPathString + " not found!");
   }
 }
 
-int PianoRoll::getMusicianType(){
-  
-  //Read from musician.csv
-  if (SD.exists("MUSICIAN.CSV")) {
-    File musicianFile = SD.open("MUSICIAN.CSV", FILE_READ);
-    String musicianName = musicianFile.readStringUntil('\n');
-    Serial.println("Initializing Musician: " + musicianName);
-    if (musicianName.equals("AxeMan")) {
-      return AxeMan;  
-    } else if (musicianName.equals("LightMan")) {
+int PianoRoll::getMusicianType() {
+  unsigned char pin5Value = digitalRead(5);
+  unsigned char pin6Value = digitalRead(6);
+  unsigned char pin7Value = digitalRead(7);
+
+  unsigned char bitValue = pin5Value + (pin6Value * 2) + (pin7Value * 4);
+
+  Serial.print("Bit Value: ");
+  Serial.println(bitValue);
+
+  switch (bitValue) {
+    case 0:
+      musicianName = "LIGHTMAN";
       return LightMan;
-    } else if (musicianName.equals("Drummer")) {
+      break;
+    case 1:
+      musicianName = "AXEMAN";
+      return AxeMan;
+      break;
+    case 2:
+      musicianName = "DRUMMER";
       return Drummer;
-    } else {
+      break;
+    default:
+      musicianName = "UNKNOWN";
       return Unknown;
-    }
-    musicianFile.close();
-  } else {
-    Serial.println("File MUSICIAN.CSV not found!");
+      break;
   }
 }
 

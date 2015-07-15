@@ -15,22 +15,17 @@ void LightMan::setup()
   pinMode(rightLightPin, OUTPUT);
 } 
  
-void LightMan::setState(unsigned char state[]) 
+void LightMan::setState(unsigned char leftLight, unsigned char rightLight) 
 { 
-  if (state[leftLightKey] == 1) {
+  if (leftLight == 1) {
     digitalWrite(leftLightPin, HIGH);
   } else {
     digitalWrite(leftLightPin, LOW);
   }
 
-  if (state[rightLightKey] == 1) {
+  if (rightLight == 1) {
     digitalWrite(rightLightPin, HIGH);
   } else {
     digitalWrite(rightLightPin, LOW);
   }
 }
-
-void LightMan::setState2(unsigned char val1, unsigned char val2) {
-  
-}
-

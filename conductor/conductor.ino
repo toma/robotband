@@ -12,11 +12,16 @@ void setup()
 {
   Serial.begin(9600); // For debugging
 
-  pianoRoll.initSD();
-    
+  pinMode(5, INPUT);
+  pinMode(6, INPUT);
+  pinMode(7, INPUT);
+
   int musicianType = pianoRoll.getMusicianType();
   musician = Musician::makeMusician(musicianType);
   musician->setup();
+
+  pianoRoll.initSD();
+
 } 
  
 void loop()
@@ -32,8 +37,7 @@ void loop()
     Serial.println(stateSet[0]);
     Serial.print("Left Arm: ");
     Serial.println(stateSet[1]);
-//    musician->setState(stateSet);
-    musician->setState2(stateSet[0], stateSet[1]);
+    musician->setState(stateSet[0], stateSet[1]);
     
     delay(pianoRoll.getDelay());
   }

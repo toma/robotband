@@ -6,6 +6,5 @@
 class AxeMan : public Musician {
   public:
     void setup();
-    void setState(unsigned char* state);
-    void setState2(unsigned char value1, unsigned char value2);
+    void setState(unsigned char value1, unsigned char value2);
 };
