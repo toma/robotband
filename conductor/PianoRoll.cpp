@@ -5,14 +5,16 @@
 #include <math.h>
 
 // Musician Types
+const unsigned char DEFAULT_RIGHT_ARM_MOVEMENT = 255;
+const unsigned char DEFAULT_LEFT_ARM_MOVEMENT = 7;
 const int Unknown = -1;
 const int LightMan = 0;
 const int AxeMan = 1;
 const int Drummer = 2;
 
 int loopBPM = 100;
-unsigned char rightArmMovement = 255;
-unsigned char leftArmMovement = 7;
+unsigned char rightArmMovement = DEFAULT_RIGHT_ARM_MOVEMENT;
+unsigned char leftArmMovement = DEFAULT_LEFT_ARM_MOVEMENT;
 
 char inputChar;
 String parsedBPM;
@@ -30,11 +32,12 @@ File instructionFile;
 void PianoRoll::initSD() {
   pinMode(10, OUTPUT);
   SD.begin(4);
+}
 
+void PianoRoll::loadSong(String songName) {
   //Use 5, 6 and 7 to determine binary value of musician, 5V into the pin means it's on
 
   //TODO: Needs to happen elsewhere
-  String songName = "SONG1.CSV";
   String songPathString = musicianName + "/" + songName;
   char songPath[songPathString.length() + 1];
   songPathString.toCharArray(songPath, songPathString.length() + 1);
@@ -107,10 +110,12 @@ void PianoRoll::readLine() {
     parsedBPM = "";
     parsedRightArm = "";
     parsedLeftArm = "";
-  } else {
+  }
+  else {
     Serial.println("Song finished");
-    //TODO: Stop moving
-    hasMoreRows = false;
+    stop();
+//    //TODO: Stop moving
+//    hasMoreRows = false;
   }
 }
 
@@ -129,3 +134,9 @@ unsigned char* PianoRoll::getStateSet() {
 
   return states;
 }
+
+void PianoRoll::stop() {
+  Serial.println("STOPPING PIANO ROLL");
+  instructionFile.close();
+  rightArmMovement = DEFAULT_RIGHT_ARM_MOVEMENT;
+  leftArmMovement = DEFAULT_LEFT_ARM_MOVEMENT;}
