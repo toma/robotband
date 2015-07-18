@@ -47,8 +47,8 @@ void AxeMan::setup()
 
 void AxeMan::setState(unsigned char rightArmValue, unsigned char leftArmValue) {
   leftArmPos = (leftArmArc/24) * leftArmValue + ((180-leftArmArc)/2);
-  Serial.print("Left arm pos: ");
-  Serial.println(leftArmPos);
+//  Serial.print("Left arm pos: ");
+//  Serial.println(leftArmPos);
   leftArmServo.write(leftArmPos);
 
   if (callsToSkip > 0) { 
@@ -84,8 +84,19 @@ void AxeMan::setState(unsigned char rightArmValue, unsigned char leftArmValue) {
     callsToSkip = 0;
   }
 
-  Serial.print("right arm pos: ");
-  Serial.println(rightArmPos);
+//  Serial.print("right arm pos: ");
+//  Serial.println(rightArmPos);
   rightArmServo.write(rightArmPos);  
 }
 
+unsigned char * AxeMan::getInitialState() {
+	return new unsigned char[2]{255, 7};
+}
+
+unsigned char * AxeMan::getFinalState() {
+	return new unsigned char[2]{255, 1};
+}
+
+String AxeMan::getFolderName() {
+	return "AXEMAN";
+}

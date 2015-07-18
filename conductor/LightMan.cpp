@@ -29,3 +29,15 @@ void LightMan::setState(unsigned char leftLight, unsigned char rightLight)
     digitalWrite(rightLightPin, LOW);
   }
 }
+
+unsigned char * LightMan::getInitialState() {
+	return new unsigned char[2]{0, 0};
+}
+
+unsigned char * LightMan::getFinalState() {
+	return new unsigned char[2]{0, 0};
+}
+
+String LightMan::getFolderName() {
+	return "LIGHTMAN";
+}

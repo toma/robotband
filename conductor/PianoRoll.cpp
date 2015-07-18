@@ -3,6 +3,7 @@
 #include <SD.h>
 #include <SPI.h>
 #include <math.h>
+#include "Musician.h"
 
 // Musician Types
 const unsigned char DEFAULT_RIGHT_ARM_MOVEMENT = 255;
@@ -22,23 +23,23 @@ String parsedRightArm;
 String parsedLeftArm;
 unsigned char index = 0;
 
-String musicianName = "";
-
 bool hasMoreRows = true;
 
 File instructionFile;
-//TODO: Eventually we need to read from setlist.csv to get the order of songs to play
 
-void PianoRoll::initSD() {
+Musician *musician;
+
+void PianoRoll::init(Musician *initMusician) {
   pinMode(10, OUTPUT);
   SD.begin(4);
+  musician = initMusician;
 }
 
 void PianoRoll::loadSong(String songName) {
-  //Use 5, 6 and 7 to determine binary value of musician, 5V into the pin means it's on
+	rightArmMovement = musician->getInitialState()[0];
+	leftArmMovement = musician->getInitialState()[1];
 
-  //TODO: Needs to happen elsewhere
-  String songPathString = musicianName + "/" + songName;
+  String songPathString = musician->getFolderName() + "/" + songName;
   char songPath[songPathString.length() + 1];
   songPathString.toCharArray(songPath, songPathString.length() + 1);
 
@@ -51,43 +52,13 @@ void PianoRoll::loadSong(String songName) {
   }
 }
 
-int PianoRoll::getMusicianType() {
-  unsigned char pin5Value = digitalRead(5);
-  unsigned char pin6Value = digitalRead(6);
-  unsigned char pin7Value = digitalRead(7);
-
-  unsigned char bitValue = pin5Value + (pin6Value * 2) + (pin7Value * 4);
-
-  Serial.print("Bit Value: ");
-  Serial.println(bitValue);
-
-  switch (bitValue) {
-    case 0:
-      musicianName = "LIGHTMAN";
-      return LightMan;
-      break;
-    case 1:
-      musicianName = "AXEMAN";
-      return AxeMan;
-      break;
-    case 2:
-      musicianName = "DRUMMER";
-      return Drummer;
-      break;
-    default:
-      musicianName = "UNKNOWN";
-      return Unknown;
-      break;
-  }
-}
-
 void PianoRoll::readLine() {
-  
+
   if (instructionFile.available() != 0) {
     inputChar = instructionFile.peek();
-    while (inputChar != '\n') {     
+    while (inputChar != '\n') {
       inputChar = instructionFile.read();
-      
+
       if (index == 0 && inputChar != ',') {
         parsedBPM += (String) inputChar;
       } else if (index == 1 && inputChar != ',') {
@@ -95,12 +66,12 @@ void PianoRoll::readLine() {
       } else if (index == 2 && inputChar != ',') {
         parsedLeftArm += (String) inputChar;
       }
-      
+
       if (inputChar == ',') {
         index++;
       }
     }
-    
+
     index = 0;
 
     loopBPM = parsedBPM.toInt();
@@ -112,10 +83,8 @@ void PianoRoll::readLine() {
     parsedLeftArm = "";
   }
   else {
-    Serial.println("Song finished");
+//    Serial.println("Song finished");
     stop();
-//    //TODO: Stop moving
-//    hasMoreRows = false;
   }
 }
 
@@ -136,7 +105,9 @@ unsigned char* PianoRoll::getStateSet() {
 }
 
 void PianoRoll::stop() {
-  Serial.println("STOPPING PIANO ROLL");
-  instructionFile.close();
-  rightArmMovement = DEFAULT_RIGHT_ARM_MOVEMENT;
-  leftArmMovement = DEFAULT_LEFT_ARM_MOVEMENT;}
+//  Serial.println("PIANO ROLL STOPPED");
+	  instructionFile.close();
+
+	rightArmMovement = musician->getFinalState()[0];
+	leftArmMovement = musician->getFinalState()[1];
+}
