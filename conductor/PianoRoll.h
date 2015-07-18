@@ -10,14 +10,13 @@
 #include "Musician.h"
 
 class PianoRoll {
-  public: 
-    void init(Musician *musician);
-    void loadSong(String songName);
-    int getDelay();
-    unsigned char* getStateSet();
-    void readLine();
-    bool hasRows();
-    void stop();
+public:
+	void init(Musician *musician);
+	void loadSong(String songName);
+	int getDelay();
+	unsigned char* getStateSet();
+	void readLine();bool hasRows();
+	void stop();
 };
 
 #endif
