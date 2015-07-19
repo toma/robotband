@@ -30,10 +30,10 @@ void Drummer::setup() {
 
 void Drummer::powerOnSelfTest() {
     //Move arms through each extreme
-    rightArmServo.write(0);
+    rightArmServo.write(180);
     leftArmServo.write(180);
     delay(1000);
-    rightArmServo.write(180);
+    rightArmServo.write(0);
     leftArmServo.write(0);
 }
 
