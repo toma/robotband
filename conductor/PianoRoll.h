@@ -1,8 +1,3 @@
-// A state is the position of an action
-// A state set is the series of states for a musician
-// An instruction set is the ordered series of state sets and corresponding
-//     delays for the entire performance
-
 #ifndef PIANOROLL_H
 #define PIANOROLL_H
 
@@ -17,6 +12,10 @@ public:
 	unsigned char* getStateSet();
 	void readLine();
 	void stop();
+	void overrideBPM(int bpm);
+private:
+    int overriddenBPM = 0;
+    unsigned char index = 0;
 };
 
 #endif

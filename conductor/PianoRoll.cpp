@@ -22,7 +22,7 @@ String parsedBPM;
 String parsedRightArm;
 String parsedLeftArm;
 
-unsigned char index = 0;
+//unsigned char index = 0;
 bool playingSong = false;
 
 File instructionFile;
@@ -32,6 +32,12 @@ void PianoRoll::init(Musician *initMusician) {
 	pinMode(10, OUTPUT);
 	SD.begin(4);
 	musician = initMusician;
+}
+
+void PianoRoll::overrideBPM(int bpm) {
+    Serial.print("Overriding BPM: ");
+    Serial.println(bpm);
+	overriddenBPM = bpm;
 }
 
 void PianoRoll::loadSong(String songName) {
@@ -76,7 +82,11 @@ void PianoRoll::readLine() {
 
 		index = 0;
 
-		loopBPM = parsedBPM.toInt();
+        if (overriddenBPM == 0) {
+            loopBPM = parsedBPM.toInt();
+        } else {
+            loopBPM = overriddenBPM;
+        }
 		rightArmMovement = parsedRightArm.toInt();
 		leftArmMovement = parsedLeftArm.toInt();
 
@@ -84,6 +94,7 @@ void PianoRoll::readLine() {
 		parsedRightArm = "";
 		parsedLeftArm = "";
 	} else if (playingSong && instructionFile.available() == 0) {
+        overriddenBPM = 0;
 		playingSong = false;
 		Serial.println("Song finished");
 		stop();
@@ -103,6 +114,7 @@ unsigned char* PianoRoll::getStateSet() {
 }
 
 void PianoRoll::stop() {
+    overriddenBPM = 0;
 	playingSong = false;
 	Serial.println("PIANO ROLL STOPPED");
 	instructionFile.close();
