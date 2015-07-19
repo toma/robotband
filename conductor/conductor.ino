@@ -17,9 +17,10 @@ void setup() {
 	pinMode(6, INPUT);
 	pinMode(7, INPUT);
 
-//  int musicianType = pianoRoll.getMusicianType();
 	musician = Musician::makeMusician();
 	musician->setup();
+
+    musician->powerOnSelfTest();
 
 	pianoRoll.init(musician);
 

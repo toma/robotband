@@ -6,10 +6,6 @@
 const unsigned char leftArmPin = 2;
 const unsigned char rightArmPin = 3;
 
-// // ACTION KEY
-const unsigned char leftArmKey = 0;
-const unsigned char rightArmKey = 1;
-
 // // ACTION LIST
 const unsigned char restingState = 255;
 const unsigned char sixteenthRest = 0;
@@ -42,6 +38,9 @@ void AxeMan::setup() {
 
 	leftArmServo.attach(leftArmPin);
 	rightArmServo.attach(rightArmPin);
+}
+
+void AxeMan::powerOnSelfTest() {
 }
 
 void AxeMan::setState(unsigned char rightArmValue, unsigned char leftArmValue) {

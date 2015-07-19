@@ -1,6 +1,7 @@
 #include "Arduino.h"
 #include "LightMan.h"
 #include "AxeMan.h"
+#include "Drummer.h"
 
 Musician *Musician::makeMusician() {
 	//Use 5, 6 and 7 to determine binary value of musician, 5V into the pin means it's on
@@ -21,8 +22,7 @@ Musician *Musician::makeMusician() {
 		return new AxeMan;
 		break;
 	case 2:
-		//TODO: Create drummer
-//	      return new Drummer;
+		return new Drummer;
 		break;
 	default:
 		return new LightMan;

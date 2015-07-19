@@ -14,6 +14,9 @@ void LightMan::setup() {
 	pinMode(rightLightPin, OUTPUT);
 }
 
+void LightMan::powerOnSelfTest() {
+}
+
 void LightMan::setState(unsigned char leftLight, unsigned char rightLight) {
 	if (leftLight == 1) {
 		digitalWrite(leftLightPin, HIGH);
