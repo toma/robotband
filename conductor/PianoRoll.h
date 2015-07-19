@@ -16,6 +16,14 @@ public:
 private:
     int overriddenBPM = 0;
     unsigned char index = 0;
+    String parsedBPM;
+    String parsedRightArm;
+    String parsedLeftArm;
+    char inputChar;
+    int loopBPM = 100;
+    unsigned char rightArmMovement;
+    unsigned char leftArmMovement;
+    bool playingSong = false;
 };
 
 #endif

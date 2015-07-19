@@ -2,36 +2,6 @@
 #include <Servo.h> // Has to be included at top level?
 #include "AxeMan.h"
 
-// // PIN CONFIGURATION
-const unsigned char leftArmPin = 2;
-const unsigned char rightArmPin = 3;
-
-// // ACTION LIST
-const unsigned char restingState = 255;
-const unsigned char sixteenthRest = 0;
-const unsigned char quarterNote = 4;
-const unsigned char eighthNote = 8;
-const unsigned char sixteenthNote = 16;
-
-// // RIGHT ARM ROTATION OFFSET
-const int rotationOffset = 90;
-
-// // LEFT ARM ARC
-const unsigned char leftArmArc = 90;
-
-// Rotation direction
-char direction = -1;
-unsigned char callsToSkip = 0;
-
-// Arm positions
-int leftArmPos = 0;
-int rightArmPos = 0;
-
-// Servo configuration
-// a maximum of eight servo objects can be created 
-Servo rightArmServo;
-Servo leftArmServo;
-
 void AxeMan::setup() {
 	pinMode(2, OUTPUT);
 	pinMode(3, OUTPUT);
@@ -41,6 +11,12 @@ void AxeMan::setup() {
 }
 
 void AxeMan::powerOnSelfTest() {
+    //Move arms through each extreme
+    rightArmServo.write(180);
+    leftArmServo.write(180);
+    delay(1000);
+    rightArmServo.write(0);
+    leftArmServo.write(0);
 }
 
 void AxeMan::setState(unsigned char rightArmValue, unsigned char leftArmValue) {

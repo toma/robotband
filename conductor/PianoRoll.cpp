@@ -5,26 +5,6 @@
 #include <math.h>
 #include "Musician.h"
 
-// Musician Types
-const unsigned char DEFAULT_RIGHT_ARM_MOVEMENT = 255;
-const unsigned char DEFAULT_LEFT_ARM_MOVEMENT = 7;
-const int Unknown = -1;
-const int LightMan = 0;
-const int AxeMan = 1;
-const int Drummer = 2;
-
-int loopBPM = 100;
-unsigned char rightArmMovement = DEFAULT_RIGHT_ARM_MOVEMENT;
-unsigned char leftArmMovement = DEFAULT_LEFT_ARM_MOVEMENT;
-
-char inputChar;
-String parsedBPM;
-String parsedRightArm;
-String parsedLeftArm;
-
-//unsigned char index = 0;
-bool playingSong = false;
-
 File instructionFile;
 Musician *musician;
 
