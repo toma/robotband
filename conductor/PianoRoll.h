@@ -7,17 +7,16 @@
 #define PIANOROLL_H
 
 #include "Arduino.h"
+#include "Musician.h"
 
 class PianoRoll {
-  public: 
-    void initSD();
-    void loadSong(String songName);
-    int getDelay();
-    int getMusicianType();
-    unsigned char* getStateSet();
-    void readLine();
-    bool hasRows();
-    void stop();
+public:
+	void init(Musician *musician);
+	void loadSong(String songName);
+	int getDelay();
+	unsigned char* getStateSet();
+	void readLine();
+	void stop();
 };
 
 #endif

@@ -3,6 +3,7 @@
 #include <SD.h>
 #include <SPI.h>
 #include <math.h>
+#include "Musician.h"
 
 // Musician Types
 const unsigned char DEFAULT_RIGHT_ARM_MOVEMENT = 255;
@@ -20,123 +21,92 @@ char inputChar;
 String parsedBPM;
 String parsedRightArm;
 String parsedLeftArm;
+
 unsigned char index = 0;
-
-String musicianName = "";
-
-bool hasMoreRows = true;
+bool playingSong = false;
 
 File instructionFile;
-//TODO: Eventually we need to read from setlist.csv to get the order of songs to play
+Musician *musician;
 
-void PianoRoll::initSD() {
-  pinMode(10, OUTPUT);
-  SD.begin(4);
+void PianoRoll::init(Musician *initMusician) {
+	pinMode(10, OUTPUT);
+	SD.begin(4);
+	musician = initMusician;
 }
 
 void PianoRoll::loadSong(String songName) {
-  //Use 5, 6 and 7 to determine binary value of musician, 5V into the pin means it's on
+	rightArmMovement = musician->getInitialState()[0];
+	leftArmMovement = musician->getInitialState()[1];
 
-  //TODO: Needs to happen elsewhere
-  String songPathString = musicianName + "/" + songName;
-  char songPath[songPathString.length() + 1];
-  songPathString.toCharArray(songPath, songPathString.length() + 1);
+	String songPathString = musician->getFolderName() + "/" + songName;
+	char songPath[songPathString.length() + 1];
+	songPathString.toCharArray(songPath, songPathString.length() + 1);
 
-  Serial.println(songPath);
-  if (SD.exists(songPath)) {
-    Serial.println("Loading song " + songPathString);
-    instructionFile = SD.open(songPath, FILE_READ);
-  } else {
-    Serial.println("File " + songPathString + " not found!");
-  }
-}
-
-int PianoRoll::getMusicianType() {
-  unsigned char pin5Value = digitalRead(5);
-  unsigned char pin6Value = digitalRead(6);
-  unsigned char pin7Value = digitalRead(7);
-
-  unsigned char bitValue = pin5Value + (pin6Value * 2) + (pin7Value * 4);
-
-  Serial.print("Bit Value: ");
-  Serial.println(bitValue);
-
-  switch (bitValue) {
-    case 0:
-      musicianName = "LIGHTMAN";
-      return LightMan;
-      break;
-    case 1:
-      musicianName = "AXEMAN";
-      return AxeMan;
-      break;
-    case 2:
-      musicianName = "DRUMMER";
-      return Drummer;
-      break;
-    default:
-      musicianName = "UNKNOWN";
-      return Unknown;
-      break;
-  }
+	Serial.println(songPath);
+	if (SD.exists(songPath)) {
+		Serial.println("Loading song " + songPathString);
+		instructionFile = SD.open(songPath, FILE_READ);
+		playingSong = true;
+	} else {
+		Serial.println("File " + songPathString + " not found!");
+		playingSong = false;
+	}
 }
 
 void PianoRoll::readLine() {
-  
-  if (instructionFile.available() != 0) {
-    inputChar = instructionFile.peek();
-    while (inputChar != '\n') {     
-      inputChar = instructionFile.read();
-      
-      if (index == 0 && inputChar != ',') {
-        parsedBPM += (String) inputChar;
-      } else if (index == 1 && inputChar != ',') {
-        parsedRightArm += (String) inputChar;
-      } else if (index == 2 && inputChar != ',') {
-        parsedLeftArm += (String) inputChar;
-      }
-      
-      if (inputChar == ',') {
-        index++;
-      }
-    }
-    
-    index = 0;
 
-    loopBPM = parsedBPM.toInt();
-    rightArmMovement = parsedRightArm.toInt();
-    leftArmMovement = parsedLeftArm.toInt();
+	if (instructionFile.available() != 0) {
+		playingSong = true;
+		inputChar = instructionFile.peek();
+		while (inputChar != '\n') {
+			inputChar = instructionFile.read();
 
-    parsedBPM = "";
-    parsedRightArm = "";
-    parsedLeftArm = "";
-  }
-  else {
-    Serial.println("Song finished");
-    stop();
-//    //TODO: Stop moving
-//    hasMoreRows = false;
-  }
-}
+			if (index == 0 && inputChar != ',') {
+				parsedBPM += (String) inputChar;
+			} else if (index == 1 && inputChar != ',') {
+				parsedRightArm += (String) inputChar;
+			} else if (index == 2 && inputChar != ',') {
+				parsedLeftArm += (String) inputChar;
+			}
 
-bool PianoRoll::hasRows() {
-  return hasMoreRows;
+			if (inputChar == ',') {
+				index++;
+			}
+		}
+
+		index = 0;
+
+		loopBPM = parsedBPM.toInt();
+		rightArmMovement = parsedRightArm.toInt();
+		leftArmMovement = parsedLeftArm.toInt();
+
+		parsedBPM = "";
+		parsedRightArm = "";
+		parsedLeftArm = "";
+	} else if (playingSong && instructionFile.available() == 0) {
+		playingSong = false;
+		Serial.println("Song finished");
+		stop();
+	}
 }
 
 int PianoRoll::getDelay() {
-  return round(((.25 / loopBPM) * 60) * 1000);
+	return round(((.25 / loopBPM) * 60) * 1000);
 }
 
 unsigned char* PianoRoll::getStateSet() {
-  static unsigned char states[2];
-  states[0] = rightArmMovement;
-  states[1] = leftArmMovement;
+	static unsigned char states[2];
+	states[0] = rightArmMovement;
+	states[1] = leftArmMovement;
 
-  return states;
+	return states;
 }
 
 void PianoRoll::stop() {
-  Serial.println("STOPPING PIANO ROLL");
-  instructionFile.close();
-  rightArmMovement = DEFAULT_RIGHT_ARM_MOVEMENT;
-  leftArmMovement = DEFAULT_LEFT_ARM_MOVEMENT;}
+	playingSong = false;
+	Serial.println("PIANO ROLL STOPPED");
+	instructionFile.close();
+
+	rightArmMovement = musician->getFinalState()[0];
+	leftArmMovement = musician->getFinalState()[1];
+}
