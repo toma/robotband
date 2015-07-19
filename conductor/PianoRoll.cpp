@@ -23,7 +23,7 @@ String parsedRightArm;
 String parsedLeftArm;
 
 unsigned char index = 0;
-bool hasMoreRows = true;
+bool playingSong = false;
 
 File instructionFile;
 Musician *musician;
@@ -46,14 +46,17 @@ void PianoRoll::loadSong(String songName) {
 	if (SD.exists(songPath)) {
 		Serial.println("Loading song " + songPathString);
 		instructionFile = SD.open(songPath, FILE_READ);
+		playingSong = true;
 	} else {
 		Serial.println("File " + songPathString + " not found!");
+		playingSong = false;
 	}
 }
 
 void PianoRoll::readLine() {
 
 	if (instructionFile.available() != 0) {
+		playingSong = true;
 		inputChar = instructionFile.peek();
 		while (inputChar != '\n') {
 			inputChar = instructionFile.read();
@@ -80,14 +83,11 @@ void PianoRoll::readLine() {
 		parsedBPM = "";
 		parsedRightArm = "";
 		parsedLeftArm = "";
-	} else {
-//    Serial.println("Song finished");
-//    stop();
+	} else if (playingSong && instructionFile.available() == 0) {
+		playingSong = false;
+		Serial.println("Song finished");
+		stop();
 	}
-}
-
-bool PianoRoll::hasRows() {
-	return hasMoreRows;
 }
 
 int PianoRoll::getDelay() {
@@ -103,6 +103,7 @@ unsigned char* PianoRoll::getStateSet() {
 }
 
 void PianoRoll::stop() {
+	playingSong = false;
 	Serial.println("PIANO ROLL STOPPED");
 	instructionFile.close();
 

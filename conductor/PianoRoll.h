@@ -15,7 +15,7 @@ public:
 	void loadSong(String songName);
 	int getDelay();
 	unsigned char* getStateSet();
-	void readLine();bool hasRows();
+	void readLine();
 	void stop();
 };
 
