@@ -32,7 +32,6 @@ void setup() {
 void loop() {
 	if (Serial.available() > 0) {
 		inputString = Serial.readStringUntil('\n');
-		Serial.print("READ STRING FROM SERIAL: ");
 		if (inputString.equalsIgnoreCase("STOP")) {
 			pianoRoll.stop();
 		} else if (inputString.equalsIgnoreCase("WHOAMI")) {

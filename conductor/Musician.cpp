@@ -17,15 +17,11 @@ Musician *Musician::makeMusician() {
 	switch (bitValue) {
 	case 0:
 		return new LightMan;
-		break;
 	case 1:
 		return new AxeMan;
-		break;
 	case 2:
 		return new Drummer;
-		break;
 	default:
 		return new LightMan;
-		break;
 	}
 }
