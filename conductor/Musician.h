@@ -8,7 +8,7 @@ public:
 	virtual void powerOnSelfTest();
 	virtual String getFolderName();
 	virtual void setup();
-	virtual void setState(String value1, String value2);
+	virtual void setState(String value1, String value2, String value3);
 	virtual String* getInitialState();
 	virtual String* getFinalState();
 };

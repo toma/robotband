@@ -19,11 +19,20 @@ void AxeMan::powerOnSelfTest() {
     leftArmServo.write(0);
 }
 
-void AxeMan::setState(String rightArmValue, String leftArmValue) {
+void AxeMan::setState(String rightArmValue, String leftArmValue, String lightValue) {
 	leftArmPos = (leftArmArc / 24) * leftArmValue.toInt() + ((180 - leftArmArc) / 2);
 //  Serial.print("Left arm pos: ");
 //  Serial.println(leftArmPos);
 	leftArmServo.write(leftArmPos);
+
+	//lights.setLights(lightValue)
+
+    /*
+     * light::SetLights(String lightString) {
+     *     //parse string
+     *     //set values for each light
+     * }
+     */
 
 	if (callsToSkip > 0) {
 		callsToSkip--;

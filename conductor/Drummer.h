@@ -10,7 +10,7 @@ public:
     Drummer();
 	void setup();
 	void powerOnSelfTest();
-	void setState(String value1, String value2);
+	void setState(String value1, String value2, String lightValue);
 	String* getInitialState();
 	String* getFinalState();
     String getFolderName();

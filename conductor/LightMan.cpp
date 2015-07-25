@@ -17,7 +17,7 @@ void LightMan::setup() {
 void LightMan::powerOnSelfTest() {
 }
 
-void LightMan::setState(String leftLight, String rightLight) {
+void LightMan::setState(String leftLight, String rightLight, String lightValue) {
 	if (leftLight.equals("1")) {
 		digitalWrite(leftLightPin, HIGH);
 	} else {

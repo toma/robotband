@@ -37,7 +37,7 @@ void Drummer::powerOnSelfTest() {
     leftArmServo.write(0);
 }
 
-void Drummer::setState(String rightArmValue, String leftArmValue) {
+void Drummer::setState(String rightArmValue, String leftArmValue, String lightValue) {
 
     leftArmPos = (leftArmArc / 24) * leftArmValue.toInt() + ((180 - leftArmArc) / 2);
     leftArmServo.write(leftArmPos);
