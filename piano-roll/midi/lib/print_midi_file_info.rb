@@ -49,13 +49,17 @@ def print_events(filename)
   real_track.events[1..real_track.events.length].each { |event|
     puts "event: #{event.class.name}"
     puts "Event delta_time: #{event.delta_time} time_from_start: #{event.time_from_start}"
-    if on_off_event?(event)
-      puts "event: note:#{event.note} delta_time:#{event.delta_time}, time_from_start:#{event.time_from_start}"
-      puts "event: #{event.inspect}"
-    end
+    # if on_off_event?(event)
+    #   puts "event: note:#{event.note} delta_time:#{event.delta_time}, time_from_start:#{event.time_from_start}"
+    #   puts "event: #{event.inspect}"
+    # end
     puts "------------"
   }
 
+end
+
+def on_off_event?(event)
+  event.kind_of?(MIDI::NoteOn) || event.kind_of?(MIDI::NoteOff)
 end
 
 def print_measure_event_mappings(filename)
@@ -86,10 +90,11 @@ end
 
 puts ("AXEMAN-1 RIGHT HAND")
 print_all_track_info('data/VerseV_Axeman1_RH.mid')
-puts ("AXEMAN-1 LEFT HAND")
-print_all_track_info('data/VerseV_Axeman1_LH.mid')
+print_events('data/VerseV_Axeman1_RH.mid')
+# puts ("AXEMAN-1 LEFT HAND")
+# print_all_track_info('data/VerseV_Axeman1_LH.mid')
 
-puts ("AXEMAN-2 RIGHT HAND")
-print_all_track_info('data/VerseV_Axeman2_RH.mid')
-puts ("AXEMAN-2 LEFT HAND")
-print_all_track_info('data/VerseV_Axeman2_LH.mid')
+# puts ("AXEMAN-2 RIGHT HAND")
+# print_all_track_info('data/VerseV_Axeman2_RH.mid')
+# puts ("AXEMAN-2 LEFT HAND")
+# print_all_track_info('data/VerseV_Axeman2_LH.mid')

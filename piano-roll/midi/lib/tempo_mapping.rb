@@ -13,8 +13,12 @@ class TempoMapping
 
   def ticks_to_sixteenth_note_count(ticks)
     duration = round_to_most_significant(ticks_to_millis(ticks))
-    puts "ticks: #{ticks} ticks_to_millis: #{ticks_to_millis(ticks)} rounded_duration: #{duration}"
+    # puts "ticks: #{ticks} ticks_to_millis: #{ticks_to_millis(ticks)} rounded_duration: #{duration}"
     duration / @millis_per_sixteenth_note
+  end
+
+  def bpm()
+    @bpm
   end
 
   private
@@ -27,12 +31,7 @@ class TempoMapping
 
     partial = millis % @millis_per_sixteenth_note
     whole = millis - partial
-
-    (1..partial.to_i.to_s.length-1).each do |x|
-      partial = BigDecimal.new(partial.to_s).round(-x, BigDecimal::ROUND_HALF_EVEN).to_i
-    end
-
-    whole + partial
+    whole + (partial / @millis_per_sixteenth_note).round * @millis_per_sixteenth_note
 
   end
 
