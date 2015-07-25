@@ -47,6 +47,7 @@ class HouseManager(Frame):
         connection.readline()
         connection.write('WHOAMI\n')
         musicianName = connection.readline()
+        print(musicianName)
         musicianList.insert(END, musicianName)
         musicians.append(connection)
 
