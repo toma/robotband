@@ -5,10 +5,12 @@
 
 PianoRoll pianoRoll;
 extern Musician *musician;
-unsigned char* stateSet;
+String* stateSet;
 
 String serialAction = "";
 String inputString = "";
+
+bool enteredLoop = false;
 
 void setup() {
 	Serial.begin(9600); // For debugging
@@ -23,13 +25,17 @@ void setup() {
     musician->powerOnSelfTest();
 
 	pianoRoll.init(musician);
-
 }
 
 //:TODO:
 // Create HSF.csv for each musician that loops something decent for non-scripted songs
 //
 void loop() {
+    if (!enteredLoop) {
+        Serial.println("LOOP_START");
+        enteredLoop = true;
+    }
+
 	if (Serial.available() > 0) {
 		inputString = Serial.readStringUntil('\n');
 		if (inputString.equalsIgnoreCase("STOP")) {

@@ -53,6 +53,8 @@ void PianoRoll::readLine() {
 				parsedRightArm += (String) inputChar;
 			} else if (index == 2 && inputChar != ',') {
 				parsedLeftArm += (String) inputChar;
+			} else if (index == 3 && inputChar != '\n') {
+				parsedRestOfCommand = (String) inputChar;
 			}
 
 			if (inputChar == ',') {
@@ -67,12 +69,13 @@ void PianoRoll::readLine() {
         } else {
             loopBPM = overriddenBPM;
         }
-		rightArmMovement = parsedRightArm.toInt();
-		leftArmMovement = parsedLeftArm.toInt();
+		rightArmMovement = parsedRightArm;
+		leftArmMovement = parsedLeftArm;
 
 		parsedBPM = "";
 		parsedRightArm = "";
 		parsedLeftArm = "";
+        parsedRestOfCommand = "";
 	} else if (playingSong && instructionFile.available() == 0) {
         overriddenBPM = 0;
 		playingSong = false;
@@ -85,10 +88,11 @@ int PianoRoll::getDelay() {
 	return round(((.25 / loopBPM) * 60) * 1000);
 }
 
-unsigned char* PianoRoll::getStateSet() {
-	static unsigned char states[2];
+String* PianoRoll::getStateSet() {
+	String states[3];
 	states[0] = rightArmMovement;
 	states[1] = leftArmMovement;
+    states[2] = parsedRestOfCommand;
 
 	return states;
 }

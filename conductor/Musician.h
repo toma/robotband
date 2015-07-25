@@ -8,9 +8,9 @@ public:
 	virtual void powerOnSelfTest();
 	virtual String getFolderName();
 	virtual void setup();
-	virtual void setState(unsigned char value1, unsigned char value2);
-	virtual unsigned char* getInitialState();
-	virtual unsigned char* getFinalState();
+	virtual void setState(String value1, String value2);
+	virtual String* getInitialState();
+	virtual String* getFinalState();
 };
 
 #endif
