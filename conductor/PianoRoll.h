@@ -9,7 +9,7 @@ public:
 	void init(Musician *musician);
 	void loadSong(String songName);
 	int getDelay();
-	String* getStateSet();
+	unsigned char* getStateSet();
 	void readLine();
 	void stop();
 	void overrideBPM(int bpm);
@@ -19,11 +19,10 @@ private:
     String parsedBPM;
     String parsedRightArm;
     String parsedLeftArm;
-    String parsedRestOfCommand;
     char inputChar;
     int loopBPM = 100;
-    String rightArmMovement;
-    String leftArmMovement;
+    unsigned char rightArmMovement;
+    unsigned char leftArmMovement;
     bool playingSong = false;
 };
 

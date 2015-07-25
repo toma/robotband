@@ -37,22 +37,22 @@ void Drummer::powerOnSelfTest() {
     leftArmServo.write(0);
 }
 
-void Drummer::setState(String rightArmValue, String leftArmValue) {
+void Drummer::setState(unsigned char rightArmValue, unsigned char leftArmValue) {
 
-    leftArmPos = (leftArmArc / 24) * leftArmValue.toInt() + ((180 - leftArmArc) / 2);
+    leftArmPos = (leftArmArc / 24) * leftArmValue + ((180 - leftArmArc) / 2);
     leftArmServo.write(leftArmPos);
 
-    rightArmPos = (rightArmArc / 24) * rightArmValue.toInt() + ((180 - rightArmArc) / 2);
+    rightArmPos = (rightArmArc / 24) * rightArmValue + ((180 - rightArmArc) / 2);
     rightArmServo.write(rightArmPos);
 
 }
 
-String* Drummer::getInitialState() {
-	return new String { 15, 15 };
+unsigned char* Drummer::getInitialState() {
+	return new unsigned char[2] { 15, 15 };
 }
 
-String* Drummer::getFinalState() {
-	return new String { 1, 1 };
+unsigned char* Drummer::getFinalState() {
+	return new unsigned char[2] { 1, 1 };
 }
 
 String Drummer::getFolderName() {
