@@ -132,6 +132,8 @@ class AxemanMotorInstructionSet
 
     sixteenth_note_count = interval.tempo_mapping.ticks_to_sixteenth_note_count(interval.ticks)
 
+    # puts "Round Up Count: #{interval.tempo_mapping.round_up_count} Round Down Count: #{interval.tempo_mapping.round_down_count}" if interval.tempo_mapping
+
     if (event_count % 2 == 0)
       (1..sixteenth_note_count).each { instructions << instruction_block.call(interval, "0") }
     else
