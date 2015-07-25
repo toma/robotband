@@ -17,26 +17,26 @@ void LightMan::setup() {
 void LightMan::powerOnSelfTest() {
 }
 
-void LightMan::setState(unsigned char leftLight, unsigned char rightLight) {
-	if (leftLight == 1) {
+void LightMan::setState(String leftLight, String rightLight, String lightValue) {
+	if (leftLight.equals("1")) {
 		digitalWrite(leftLightPin, HIGH);
 	} else {
 		digitalWrite(leftLightPin, LOW);
 	}
 
-	if (rightLight == 1) {
+	if (rightLight.equals("1")) {
 		digitalWrite(rightLightPin, HIGH);
 	} else {
 		digitalWrite(rightLightPin, LOW);
 	}
 }
 
-unsigned char * LightMan::getInitialState() {
-	return new unsigned char[2] { 0, 0 };
+String * LightMan::getInitialState() {
+	return new String { 0, 0 };
 }
 
-unsigned char * LightMan::getFinalState() {
-	return new unsigned char[2] { 0, 0 };
+String * LightMan::getFinalState() {
+	return new String { 0, 0 };
 }
 
 String LightMan::getFolderName() {

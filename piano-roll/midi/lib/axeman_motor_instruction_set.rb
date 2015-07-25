@@ -2,7 +2,7 @@ require 'midilib/sequence'
 require 'midilib/io/seqreader'
 require './tempo_mapping'
 
-MidiTemporalInterval = Struct.new(:ticks, :tempo_mapping)
+# TODO: Convert to class that encapsulates TempoMapping behavior
 MidiPitchAndTemporalInterval = Struct.new(:ticks, :tempo_mapping, :fret_position)
 
 class AxemanMotorInstructionSet
@@ -13,11 +13,6 @@ class AxemanMotorInstructionSet
     @milliseconds_per_quarter_note = 0
     @pick_hand_midi_file = pick_hand_midi_file
     @fret_hand_midi_file = fret_hand_midi_file
-  end
-
-  def instructions()
-    # TODO: Implement me!
-    # return [] 'bpm,fret_hand_instruction,pick_hand_instruction'
   end
 
   def load_event_track(midi_file)
@@ -32,27 +27,48 @@ class AxemanMotorInstructionSet
 
     puts "GENERATING PICK HAND INSTRUCTIONS"
     load_event_track(@pick_hand_midi_file)
-    pick_hand_intervals = process_picking_intervals(compute_temporal_intervals())
+    pick_hand_intervals = convert_intervals_to_instructions(events_to_pitch_and_temporal_intervals(), &method(:picking_instructions))
 
-    # pick_hand_intervals.each { |instruction|
-    #   puts "Instruction: #{instruction}"
-    # }
+    puts "GENERATING FRET HAND INSTRUCTIONS"
+    load_event_track(@fret_hand_midi_file)
+    fret_hand_instructions = convert_intervals_to_instructions(events_to_pitch_and_temporal_intervals(), &method(:fretting_instructions))
 
-    # puts "GENERATING FRET HAND INSTRUCTIONS"
-    # load_event_track(@fret_hand_midi_file)
-    # left_hand_intervals = process_pitch_and_temporal_intervals(compute_pitch_and_temporal_intervals())
-    # left_hand_intervals.each { |instruction|
-    #   puts "Left Hand Instruction: #{instruction}"
-    # }
+    # puts "total_ph_instructions: #{pick_hand_intervals.length} total_lh_instrutions:#{fret_hand_intervals.length}"
 
-    # TODO: Complete me. (generate bpm,lh_instruction,rh_instruction csv file)
+    normalize_instruction_arrays(pick_hand_intervals, fret_hand_instructions)
+    merge_instruction_lists(pick_hand_intervals, fret_hand_instructions)
 
   end
 
-  def compute_pitch_and_temporal_intervals()
+  def merge_instruction_lists(pick_hand_intervals, fret_hand_intervals)
+
+    merged_instructions = []
+
+    (0..pick_hand_intervals.length-1).each do |i|
+      merged_instructions << "#{pick_hand_intervals[i]},#{fret_hand_intervals[i]}"
+    end
+
+    merged_instructions
+  end
+
+  #TODO: This is a hack. Remove once differing instruction sizes per hand is fixed
+  def normalize_instruction_arrays(pick_hand_intervals, fret_hand_intervals)
+    if (fret_hand_intervals.length > pick_hand_intervals.length)
+      (0..(fret_hand_intervals.length - pick_hand_intervals.length)-1).each {
+        pick_hand_intervals << "75,0"
+      }
+    elsif (fret_hand_intervals.length < pick_hand_intervals.length)
+      (0..(pick_hand_intervals.length - fret_hand_intervals.length)-1).each {
+        fret_hand_intervals << "0"
+      }
+    end
+  end
+
+  def events_to_pitch_and_temporal_intervals()
     tempo_mapping = nil
     intervals = []
     total_ticks = 0
+    last_event = MIDI::NoteOff
 
     @event_track.events.each { |event|
 
@@ -61,98 +77,35 @@ class AxemanMotorInstructionSet
       end
 
       if note_on_or_off_event?(event)
-        # If the very first on event, use time_from_start otherwise use delta
-        delta = intervals.empty? ? event.time_from_start : event.delta_time
-        interval = MidiPitchAndTemporalInterval.new(delta, tempo_mapping, (event.note % 40))
+        #TODO: why event.kind_of?(last_event) no worky??
+        if (event.class.name != last_event.class.name)
+          delta = intervals.empty? ? event.time_from_start : event.delta_time
+          interval = MidiPitchAndTemporalInterval.new(delta, tempo_mapping, (event.note % 40))
+          last_event = event
 
-        total_ticks += delta
+          total_ticks += delta
 
-        intervals << interval
-      end
-    }
-
-    # puts "TOTAL LEFT HAND TICKS: #{total_ticks}"
-
-    intervals
-
-  end
-
-  def compute_temporal_intervals()
-    tempo_mapping = nil
-    intervals = []
-    total_ticks = 0
-
-    @event_track.events.each { |event|
-
-      if event.kind_of?(MIDI::Tempo)
-        tempo_mapping = TempoMapping.new(event.tempo, @seq.ppqn)
-      end
-
-      if note_on_or_off_event?(event)
-        # If the very first on event, use time_from_start otherwise use delta
-        delta = intervals.empty? ? event.time_from_start : event.delta_time
-        interval = MidiTemporalInterval.new(delta, tempo_mapping)
-
-        total_ticks += delta
-
-        intervals << interval
-      end
-    }
-
-    intervals
-
-  end
-
-  # TODO: this is the code to columnize our right-hand instructions.
-  def process_picking_intervals(intervals)
-    event_count = 0
-    instructions = []
-    total_sixteenths = 0
-
-    intervals.each { |interval|
-
-      sixteenth_note_count = interval.tempo_mapping.ticks_to_sixteenth_note_count(interval.ticks)
-      total_sixteenths += sixteenth_note_count
-
-      if event_count % 2 == 0
-        (1..sixteenth_note_count).each {
-          instructions << 0
-        }
-      else
-        if sixteenth_note_count < 2
-          instructions << 16
-        else
-
-          quarters = sixteenth_note_count / 4
-          sixteenths = sixteenth_note_count % 4
-          eights = sixteenths / 2
-
-          (1..quarters).each {
-            instructions << 4
-
-            (1..3).each {
-              instructions << "x"
-            }
-          }
-
-          (1..eights).each {
-            instructions << 8
-            instructions << "x"
-          }
-
-          instructions << 16
-
+          intervals << interval
         end
       end
-
-      event_count += 1
     }
 
-    instructions
+    # TODO: Complete this checksum including tempo changes
+    # puts "TOTAL 16th notes for FretHand tempo mapping: total_ticks=#{total_ticks} total_sixteenths:#{tempo_mapping.ticks_to_sixteenth_note_count(total_ticks)}"
+
+    intervals
 
   end
 
-  def process_pitch_and_temporal_intervals(intervals)
+  def fretting_instructions(interval, note_duration)
+    interval.fret_position
+  end
+
+  def picking_instructions(interval, note_duration)
+    "#{interval.tempo_mapping.bpm()},#{note_duration}"
+  end
+
+  def convert_intervals_to_instructions(intervals, &instruction_block)
 
     event_count = 0
     instructions = []
@@ -163,37 +116,43 @@ class AxemanMotorInstructionSet
       sixteenth_note_count = interval.tempo_mapping.ticks_to_sixteenth_note_count(interval.ticks)
       total_sixteenths += sixteenth_note_count
 
-      if event_count % 2 == 0
-        (1..sixteenth_note_count).each {
-          instructions << interval.fret_position
-        }
-      else
-        if sixteenth_note_count < 2
-          instructions << interval.fret_position
-        else
-          quarters = sixteenth_note_count / 4
-          sixteenths = sixteenth_note_count % 4
-          eights = sixteenths / 2
+      instructions << interval_to_instructions(event_count, interval, &instruction_block)
 
-          (1..quarters).each {
-            (1..4).each {
-              instructions << interval.fret_position
-            }
-          }
-
-          (1..eights).each {
-            (1..2).each {
-              instructions << interval.fret_position
-            }
-          }
-
-          instructions << interval.fret_position
-
-        end
-      end
+      # puts "event_count:#{event_count} 16th_count: #{sixteenth_note_count} fromTicks:#{interval.ticks}"
 
       event_count += 1
     }
+
+    instructions.flatten
+
+  end
+
+  def interval_to_instructions(event_count, interval, &instruction_block)
+    instructions = []
+
+    sixteenth_note_count = interval.tempo_mapping.ticks_to_sixteenth_note_count(interval.ticks)
+
+    # puts "Round Up Count: #{interval.tempo_mapping.round_up_count} Round Down Count: #{interval.tempo_mapping.round_down_count}" if interval.tempo_mapping
+
+    if (event_count % 2 == 0)
+      (1..sixteenth_note_count).each { instructions << instruction_block.call(interval, "0") }
+    else
+      if (sixteenth_note_count == 1)
+        instructions << instruction_block.call(interval, "16")
+      else
+        quarters = (sixteenth_note_count / 4).floor
+        remaining_sixteenths = (sixteenth_note_count % 4).floor
+        eights = (remaining_sixteenths / 2).floor
+
+        (1..(quarters*4)).each { instructions << instruction_block.call(interval, "4") }
+
+        (1..(eights*2)).each { instructions << instruction_block.call(interval, "8") }
+
+        if (remaining_sixteenths % 2 > 0)
+          instructions << instruction_block.call(interval, "16")
+        end
+      end
+    end
 
     instructions
 
@@ -201,13 +160,6 @@ class AxemanMotorInstructionSet
 
   def note_on_or_off_event?(event)
     event.kind_of?(MIDI::NoteOn) || event.kind_of?(MIDI::NoteOff)
-  end
-
-  def print_pick_hand_instructions(pick_hand_instructions)
-    puts "Articulation,Direction,AbsoluteStrikeTime,StrikeTimeDelta,NextStrikeDelta"
-    pick_hand_instructions.each { |instruction|
-      puts ",#{instruction.direction},#{instruction.absolute_strike_time},#{instruction.strike_time_delta},#{instruction.next_strike_delta}"
-    }
   end
 
 end

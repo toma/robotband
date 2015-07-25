@@ -10,9 +10,9 @@ public:
     Drummer();
 	void setup();
 	void powerOnSelfTest();
-	void setState(unsigned char value1, unsigned char value2);
-	unsigned char* getInitialState();
-	unsigned char* getFinalState();
+	void setState(String value1, String value2, String lightValue);
+	String* getInitialState();
+	String* getFinalState();
     String getFolderName();
 
 private:

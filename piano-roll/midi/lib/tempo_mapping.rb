@@ -1,5 +1,3 @@
-require 'bigdecimal'
-
 class TempoMapping
 
   def initialize(midi_tempo, resolution)
@@ -9,12 +7,25 @@ class TempoMapping
     @millis_per_tick = ((@midi_tempo / @resolution).to_f / 1000).to_f
     @millis_per_quarter_note = 60000 / @bpm
     @millis_per_sixteenth_note = @millis_per_quarter_note / 4
+    @round_up_count = 0
+    @round_down_count = 0
   end
 
   def ticks_to_sixteenth_note_count(ticks)
     duration = round_to_most_significant(ticks_to_millis(ticks))
-    puts "ticks: #{ticks} ticks_to_millis: #{ticks_to_millis(ticks)} rounded_duration: #{duration}"
     duration / @millis_per_sixteenth_note
+  end
+
+  def bpm()
+    @bpm
+  end
+
+  def round_down_count
+    @round_down_count
+  end
+
+  def round_up_count
+    @round_up_count
   end
 
   private
@@ -27,12 +38,20 @@ class TempoMapping
 
     partial = millis % @millis_per_sixteenth_note
     whole = millis - partial
+    round_multiplier = (partial / @millis_per_sixteenth_note).round
+    duration = whole + (round_multiplier * @millis_per_sixteenth_note)
 
-    (1..partial.to_i.to_s.length-1).each do |x|
-      partial = BigDecimal.new(partial.to_s).round(-x, BigDecimal::ROUND_HALF_EVEN).to_i
+    if (partial > 0)
+      if (round_multiplier == 0)
+        @round_down_count += 1
+      elsif (round_multiplier == 1)
+        @round_up_count += 1
+      else
+        puts "WTF We did not round!! millis:#{millis} round_multiplier:#{round_multiplier} partial: #{partial}"
+      end
     end
 
-    whole + partial
+    duration
 
   end
 
