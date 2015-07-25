@@ -9,8 +9,9 @@ import os
 import serial
 
 WAVE_PATH = os.path.expanduser('~') + "/wav/"
-musicians = [ serial.Serial('/dev/tty.usbmodem1411', 9600),
-              serial.Serial('/dev/tty.usbmodem1451', 9600)]
+
+musicians = []
+
 
 class HouseManager(Frame):
   def __init__(self, parent):
@@ -26,15 +27,28 @@ class HouseManager(Frame):
     songList = Listbox(self)
     songList.bind("<Double-Button-1>", self.playSong)
 
+    musicianList = Listbox(self)
+
+
     nextSongButton = Button(self, text="Stop Song", 
         command=self.stopSong)
 
     self.pack(fill=BOTH, expand=1)
     nextSongButton.pack(side="bottom", fill=X)
+    musicianList.pack(side="top", fill="both", expand=True)
     songList.pack(side="top", fill="both", expand=True)
 
     for item in os.listdir(WAVE_PATH):
       songList.insert(END, item.rsplit('.', 1)[0])
+
+    for tty in os.listdir('/dev/'):
+      if tty.startswith('tty.usbmodem'):
+        connection = serial.Serial('/dev/' + tty, 9600)
+        connection.readline()
+        connection.write('WHOAMI\n')
+        musicianName = connection.readline()
+        musicianList.insert(END, musicianName)
+        musicians.append(connection)
 
   def playSong(self, event):
     widget = event.widget
