@@ -9,7 +9,7 @@ class AxeMan: public Musician {
 public:
 	void setup();
 	void powerOnSelfTest();
-	void setState(String value1, String value2, String lightValue);
+	void setState(String value1, String value2);
 	String* getInitialState();
 	String* getFinalState();
 	String getFolderName();

@@ -2,7 +2,6 @@
 #include <Servo.h>
 #include <SD.h>
 #include <SPI.h>
-#include <Adafruit_NeoPixel.h>
 
 PianoRoll pianoRoll;
 extern Musician *musician;
@@ -64,7 +63,7 @@ void loop() {
 //		Serial.println(stateSet[0]);
 //		Serial.print("Left Arm: ");
 //		Serial.println(stateSet[1]);
-	musician->setState(stateSet[0], stateSet[1], stateSet[2]);
+	musician->setState(stateSet[0], stateSet[1]);
 
 	delay(pianoRoll.getDelay());
 }
