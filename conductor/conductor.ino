@@ -2,6 +2,7 @@
 #include <Servo.h>
 #include <SD.h>
 #include <SPI.h>
+#include "Adafruit_NeoPixel.h"
 
 PianoRoll pianoRoll;
 extern Musician *musician;
@@ -23,12 +24,8 @@ void setup() {
     musician->powerOnSelfTest();
 
 	pianoRoll.init(musician);
-
 }
 
-//:TODO:
-// Create HSF.csv for each musician that loops something decent for non-scripted songs
-//
 void loop() {
 	if (Serial.available() > 0) {
 		inputString = Serial.readStringUntil('\n');
@@ -51,12 +48,6 @@ void loop() {
 	stateSet = pianoRoll.getStateSet();
 	int loopDelay = pianoRoll.getDelay();
 
-//		Serial.print("Delay: ");
-//		Serial.println(loopDelay);
-//		Serial.print("Right Arm: ");
-//		Serial.println(stateSet[0]);
-//		Serial.print("Left Arm: ");
-//		Serial.println(stateSet[1]);
 	musician->setState(stateSet[0], stateSet[1]);
 
 	delay(pianoRoll.getDelay());
