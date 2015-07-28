@@ -7,13 +7,14 @@
 
 class AxeMan: public Musician {
 public:
-	void setup();
-	void powerOnSelfTest();
-	void setState(String value1, String value2, String lightValue);
-	String* getInitialState();
-	String* getFinalState();
-	String getFolderName();
-private:
+    virtual String getFolderName();
+    void setup();
+    void powerOnSelfTest();
+    void setState(unsigned char value1, unsigned char value2);
+    unsigned char* getInitialState();
+    unsigned char* getFinalState();
+
+protected:
     int leftArmPos = 0;
     int rightArmPos = 0;
     Servo rightArmServo;
@@ -34,11 +35,11 @@ private:
     const unsigned char rightArmPin = 3;
 
     // ACTION LIST
-    String restingState = "255";
-    String sixteenthRest = "0";
-    String quarterNote = "4";
-    String eighthNote = "8";
-    String sixteenthNote = "16";
+    const unsigned char restingState = 255;
+    const unsigned char sixteenthRest = 0;
+    const unsigned char quarterNote = 4;
+    const unsigned char eighthNote = 8;
+    const unsigned char sixteenthNote = 16;
 };
 
 #endif

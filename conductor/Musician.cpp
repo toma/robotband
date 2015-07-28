@@ -1,7 +1,8 @@
 #include "Arduino.h"
 #include "LightMan.h"
-#include "AxeMan.h"
 #include "Drummer.h"
+#include "LeadGuitarist.h"
+#include "RhythmGuitarist.h"
 
 Musician *Musician::makeMusician() {
     //Use 5, 6 and 7 to determine binary value of musician, 5V into the pin means it's on
@@ -11,15 +12,17 @@ Musician *Musician::makeMusician() {
 
     unsigned char bitValue = pin5Value + (pin6Value * 2) + (pin7Value * 4);
 
-//	Serial.print("Musician Jumper Bit Value: ");
-//	Serial.println(bitValue);
+    Serial.print("Musician Jumper Bit Value: ");
+    Serial.println(bitValue);
 
     switch (bitValue) {
         case 0:
             return new LightMan;
         case 1:
-            return new AxeMan;
+            return new LeadGuitarist;
         case 2:
+            return new RhythmGuitarist;
+        case 4:
             return new Drummer;
         default:
             return new LightMan;

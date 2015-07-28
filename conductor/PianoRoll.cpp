@@ -53,9 +53,11 @@ void PianoRoll::readLine() {
 				parsedRightArm += (String) inputChar;
 			} else if (index == 2 && inputChar != ',') {
 				parsedLeftArm += (String) inputChar;
-			} else if (index == 3 && inputChar != '\n') {
-				parsedRestOfCommand = (String) inputChar;
-			}
+			} else if (index == 3 && inputChar != ',') {
+                parsedLightFlags += (String) inputChar;
+            } else if (index == 4 && inputChar != ',') {
+                parsedLightColor += (String) inputChar;
+            }
 
 			if (inputChar == ',') {
 				index++;
@@ -69,13 +71,16 @@ void PianoRoll::readLine() {
         } else {
             loopBPM = overriddenBPM;
         }
-		rightArmMovement = parsedRightArm;
-		leftArmMovement = parsedLeftArm;
+		rightArmMovement = parsedRightArm.toInt();
+		leftArmMovement = parsedLeftArm.toInt();
+        lightFlags = parsedLightFlags.toInt();
+        lightColor = parsedLightColor.toInt();
 
 		parsedBPM = "";
 		parsedRightArm = "";
 		parsedLeftArm = "";
-        parsedRestOfCommand = "";
+        parsedLightFlags = "";
+        parsedLightColor = "";
 	} else if (playingSong && instructionFile.available() == 0) {
         overriddenBPM = 0;
 		playingSong = false;
@@ -88,11 +93,12 @@ int PianoRoll::getDelay() {
 	return round(((.25 / loopBPM) * 60) * 1000);
 }
 
-String* PianoRoll::getStateSet() {
-	String states[3];
+unsigned char* PianoRoll::getStateSet() {
+	static unsigned char states[4];
 	states[0] = rightArmMovement;
 	states[1] = leftArmMovement;
-    states[2] = parsedRestOfCommand;
+    states[2] = lightFlags;
+    states[3] = lightColor;
 
 	return states;
 }
