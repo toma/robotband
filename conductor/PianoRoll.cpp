@@ -74,11 +74,6 @@ void PianoRoll::readLine() {
 		rightArmMovement = parsedRightArm.toInt();
 		leftArmMovement = parsedLeftArm.toInt();
         lightFlags = parsedLightFlags.toInt();
-        Serial.print("parsedLightColor: " );
-        Serial.println(parsedLightColor);
-        int intColor = parsedLightColor.toInt();
-        Serial.print("intColor: " );
-        Serial.println(intColor);
         lightColor = parsedLightColor.toInt();
 
 		parsedBPM = "";

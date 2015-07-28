@@ -10,9 +10,11 @@ unsigned char *stateSet;
 unsigned char pixelFlags;
 uint32_t pixelColor = 0;
 
-int red;
-int green;
-int blue;
+uint32_t colors[3];
+
+int RED = 0;
+int GREEN = 1;
+int BLUE = 2;
 
 String serialAction = "";
 String inputString = "";
@@ -50,8 +52,8 @@ void setup() {
 void checkPixelOn(unsigned char flags, unsigned char pixelNumber, unsigned char definedPixel, uint32_t color) {
     if ((definedPixel & flags) == definedPixel) {
         medallion.setPixelColor(pixelNumber, color);
-        Serial.print("Turning on pixel: ");
-        Serial.println(pixelNumber);
+//        Serial.print("Turning on pixel: ");
+//        Serial.println(pixelNumber);
     } else {
         medallion.setPixelColor(pixelNumber, medallion.Color(0, 0, 0));
     }
@@ -100,19 +102,19 @@ void loop() {
     musician->setState(stateSet[0], stateSet[1]);
 
     pixelFlags = stateSet[2];
-
-    //TODO: Why is this not being converted from String to Long correctly?
     pixelColor = stateSet[3];
 
-    Serial.print("pixelColor: " );
-    Serial.println(pixelColor);
+    if (pixelColor == 1) {
+        colors[RED] = 255;
+        colors[GREEN] = 0;
+        colors[BLUE] = 0;
+    } else if (pixelColor == 2) {
+        colors[RED] = 0;
+        colors[GREEN] = 255;
+        colors[BLUE] = 0;
+    }
 
-    red = (pixelColor >> 16) & 0x0ff;
-    Serial.print("red: " );
-    Serial.println(red);
-    green = (pixelColor >> 8) & 0x0ff;
-    blue = (pixelColor) & 0x0ff;
-    displayMedallion(pixelFlags, medallion.Color(red, green, blue));
+    displayMedallion(pixelFlags, medallion.Color(colors[RED], colors[GREEN], colors[BLUE]));
 
     delay(pianoRoll.getDelay());
 
