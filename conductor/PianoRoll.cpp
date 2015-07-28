@@ -53,7 +53,11 @@ void PianoRoll::readLine() {
 				parsedRightArm += (String) inputChar;
 			} else if (index == 2 && inputChar != ',') {
 				parsedLeftArm += (String) inputChar;
-			}
+			} else if (index == 3 && inputChar != ',') {
+                parsedLightFlags += (String) inputChar;
+            } else if (index == 4 && inputChar != ',') {
+                parsedLightColor += (String) inputChar;
+            }
 
 			if (inputChar == ',') {
 				index++;
@@ -69,10 +73,19 @@ void PianoRoll::readLine() {
         }
 		rightArmMovement = parsedRightArm.toInt();
 		leftArmMovement = parsedLeftArm.toInt();
+        lightFlags = parsedLightFlags.toInt();
+        Serial.print("parsedLightColor: " );
+        Serial.println(parsedLightColor);
+        int intColor = parsedLightColor.toInt();
+        Serial.print("intColor: " );
+        Serial.println(intColor);
+        lightColor = parsedLightColor.toInt();
 
 		parsedBPM = "";
 		parsedRightArm = "";
 		parsedLeftArm = "";
+        parsedLightFlags = "";
+        parsedLightColor = "";
 	} else if (playingSong && instructionFile.available() == 0) {
         overriddenBPM = 0;
 		playingSong = false;
@@ -86,9 +99,11 @@ int PianoRoll::getDelay() {
 }
 
 unsigned char* PianoRoll::getStateSet() {
-	static unsigned char states[2];
+	static unsigned char states[4];
 	states[0] = rightArmMovement;
 	states[1] = leftArmMovement;
+    states[2] = lightFlags;
+    states[3] = lightColor;
 
 	return states;
 }

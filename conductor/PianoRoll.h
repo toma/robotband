@@ -19,10 +19,14 @@ private:
     String parsedBPM;
     String parsedRightArm;
     String parsedLeftArm;
+    String parsedLightFlags;
+    String parsedLightColor;
     char inputChar;
     int loopBPM = 100;
     unsigned char rightArmMovement;
     unsigned char leftArmMovement;
+    unsigned char lightFlags = 0;
+    uint32_t lightColor = 0;
     bool playingSong = false;
 };
 
