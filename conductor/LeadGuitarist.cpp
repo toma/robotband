@@ -1,5 +1,5 @@
 #include "LeadGuitarist.h"
 
 String LeadGuitarist::getFolderName() {
-    return "LEADGUITARIST";
+    return "LEADGUIT";
 }
