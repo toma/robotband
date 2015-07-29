@@ -8,9 +8,11 @@ def write_piano_roll(filename, instructions)
   end
 end
 
+puts "Generating Instructions for VerseV Axeman1"
 instruction_set = AxemanMotorInstructionSet.new('../data/VerseV_Axeman1_RH.mid', '../data/VerseV_Axeman1_LH.mid')
 write_piano_roll('../rolls/versev/axeman1/VerseV.csv', instruction_set.generate_axeman_piano_roll())
 
+puts "Generating Instructions for VerseV Axeman2"
 instruction_set = AxemanMotorInstructionSet.new('../data/VerseV_Axeman2_RH.mid', '../data/VerseV_Axeman2_LH.mid')
 write_piano_roll('../rolls/versev/axeman2/VerseV.csv', instruction_set.generate_axeman_piano_roll())
 

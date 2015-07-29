@@ -4,6 +4,7 @@ require './tempo_mapping'
 
 # TODO: Convert to class that encapsulates TempoMapping behavior
 MidiPitchAndTemporalInterval = Struct.new(:ticks, :tempo_mapping, :fret_position)
+SequenceSectionInfo = Struct.new(:section_type, :ticks_from_start, :tempo_mapping)
 
 class AxemanMotorInstructionSet
 
@@ -13,6 +14,7 @@ class AxemanMotorInstructionSet
     @milliseconds_per_quarter_note = 0
     @pick_hand_midi_file = pick_hand_midi_file
     @fret_hand_midi_file = fret_hand_midi_file
+    @sequence_section_infos = []
   end
 
   def load_event_track(midi_file)
@@ -23,15 +25,25 @@ class AxemanMotorInstructionSet
     }
   end
 
+  def print_sequence_section_info()
+    @sequence_section_infos.each do | info |
+      puts "SectionType: #{info.section_type} TicksFromStart: #{info.ticks_from_start}, SixteenthsFromStart: #{info.tempo_mapping.ticks_to_sixteenth_note_count(info.ticks_from_start)}"
+    end
+  end
+
   def generate_axeman_piano_roll()
 
     puts "GENERATING PICK HAND INSTRUCTIONS"
     load_event_track(@pick_hand_midi_file)
     pick_hand_intervals = convert_intervals_to_instructions(events_to_pitch_and_temporal_intervals(), &method(:picking_instructions))
+    print_sequence_section_info()
+
+    @sequence_section_infos.clear
 
     puts "GENERATING FRET HAND INSTRUCTIONS"
     load_event_track(@fret_hand_midi_file)
     fret_hand_instructions = convert_intervals_to_instructions(events_to_pitch_and_temporal_intervals(), &method(:fretting_instructions))
+    print_sequence_section_info()
 
     # puts "total_ph_instructions: #{pick_hand_intervals.length} total_lh_instrutions:#{fret_hand_intervals.length}"
 
@@ -72,8 +84,14 @@ class AxemanMotorInstructionSet
 
     @event_track.events.each { |event|
 
+      # puts "Processing Event Type: #{event.class.name} #{note_on_or_off_event?(event) ? event.delta_time : ''}"
+
       if event.kind_of?(MIDI::Tempo)
         tempo_mapping = TempoMapping.new(event.tempo, @seq.ppqn)
+      end
+
+      if (event.kind_of?(MIDI::Tempo) || event.kind_of?(MIDI::Marker) || event.kind_of?(MIDI::TimeSig))
+        @sequence_section_infos << SequenceSectionInfo.new(event.to_s, event.time_from_start, tempo_mapping)
       end
 
       if note_on_or_off_event?(event)
@@ -90,8 +108,7 @@ class AxemanMotorInstructionSet
       end
     }
 
-    # TODO: Complete this checksum including tempo changes
-    # puts "TOTAL 16th notes for FretHand tempo mapping: total_ticks=#{total_ticks} total_sixteenths:#{tempo_mapping.ticks_to_sixteenth_note_count(total_ticks)}"
+    # puts "Events to time_and_pitch intervals: #{intervals.length}"
 
     intervals
 
@@ -123,7 +140,10 @@ class AxemanMotorInstructionSet
       event_count += 1
     }
 
-    instructions.flatten
+    total = instructions.flatten
+    # puts "INTERVALS CONVERTED TO INSTRUCTIONS: event_count:#{event_count} total_sixteenths:#{total_sixteenths} instructions:#{total.length}"
+
+    total
 
   end
 
