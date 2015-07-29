@@ -62,8 +62,8 @@ void checkPixelOn(unsigned char flags, unsigned char pixelNumber, unsigned char 
 // Fill the dots one after the other with a color
 void displayMedallion(unsigned char flags, uint32_t color) {
 
-    Serial.print("FLAGS: ");
-    Serial.println(flags);
+//    Serial.print("FLAGS: ");
+//    Serial.println(flags);
 
     checkPixelOn(flags, 0, PIXEL_0, color);
     checkPixelOn(flags, 1, PIXEL_1, color);
