@@ -1,6 +1,6 @@
 require 'midilib/sequence'
 require 'midilib/io/seqreader'
-require './tempo_mapping'
+require_relative 'tempo_mapping'
 
 # TODO: Convert to class that encapsulates TempoMapping behavior
 MidiPitchAndTemporalInterval = Struct.new(:ticks, :tempo_mapping, :fret_position)

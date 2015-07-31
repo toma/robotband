@@ -3,10 +3,18 @@
     {
       "Section": {
         "name": "CountIn",
-        "patterns": [
+        "picking_patterns": [
           {
-            "repetition_count": 2,
+            "meter": "4/4",
+            "repetition_count": "2",
             "pattern": "4,4,4,4"
+          }
+        ],
+        "fret_hand_patterns": [
+          {
+            "meter": "4/4",
+            "repetition_count": "1",
+            "pattern": "0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0"
           }
         ]
       }
@@ -14,10 +22,33 @@
     {
       "Section": {
         "name": "Intro A-I",
-        "patterns": [
+        "picking_patterns": [
           {
+            "meter": "6/4",
             "repetition_count": "*",
             "pattern": "8,8,8,8,8,8,8,8"
+          }
+        ],
+        "fret_hand_patterns": [
+          {
+            "meter": "6/4",
+            "repetition_count": "1",
+            "pattern": "0|7,0|7,0|7,0|7,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|5,0|5,0|5,0|5"
+          },
+          {
+            "meter": "6/4",
+            "repetition_count": "1",
+            "pattern": "0|7,0|7,0|7,0|7,0|7,0|7,0|7,0|7,0|11,0|11,0|11,0|11,0|9,0|9,0|9,0|9"
+          },
+          {
+            "meter": "6/4",
+            "repetition_count": "1",
+            "pattern": "0|7,0|7,0|7,0|7,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|5,0|5,0|5,0|5"
+          },
+          {
+            "meter": "6/4",
+            "repetition_count": "1",
+            "pattern": "0|7,0|7,0|7,0|7,0|5,0|5,0|5,0|5,0|3,0|3,0|3,0|3,0|1,0|1,0|1,0|1"
           }
         ]
       }
