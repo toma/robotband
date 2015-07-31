@@ -73,14 +73,14 @@ def print_measure_event_mappings(filename)
 
   # Get all measures, so events can be mapped to measures:
   measures = seq.get_measures
-  print_measure_data(measures)
+  # print_measure_data(measures)
 
   real_track.each { |e|
 
     if on_off_event?(e)
       e.print_note_names = true
       # mbt = measure:beat:ticks
-      puts "#{e.class.name} #{measures.to_mbt(e)} ch #{e.note_to_s}"
+      puts "#{e.class.name} #{measures.to_mbt(e)} time_delta: #{e.delta_time} ch #{e.note_to_s}"
     end
   }
 
@@ -89,12 +89,15 @@ def print_measure_event_mappings(filename)
 end
 
 puts ("AXEMAN-1 RIGHT HAND")
-print_all_track_info('data/VerseV_Axeman1_RH.mid')
-print_events('data/VerseV_Axeman1_RH.mid')
-# puts ("AXEMAN-1 LEFT HAND")
+# print_all_track_info('../data/VerseV_Axeman1_RH.mid')
+# print_events('data/VerseV_Axeman1_RH.mid')
+# print_measure_event_mappings('../data/VerseV_Axeman1_RH.mid')
+
+puts ("AXEMAN-1 LEFT HAND")
+# print_measure_event_mappings('../data/VerseV_Axeman1_LH.mid')
 # print_all_track_info('data/VerseV_Axeman1_LH.mid')
 
-# puts ("AXEMAN-2 RIGHT HAND")
+puts ("AXEMAN-2 RIGHT HAND")
 # print_all_track_info('data/VerseV_Axeman2_RH.mid')
-# puts ("AXEMAN-2 LEFT HAND")
+puts ("AXEMAN-2 LEFT HAND")
 # print_all_track_info('data/VerseV_Axeman2_LH.mid')

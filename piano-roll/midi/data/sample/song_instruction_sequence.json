@@ -1,0 +1,26 @@
+{
+  "SongInstructionSequence": [
+    {
+      "Section": {
+        "name": "CountIn",
+        "patterns": [
+          {
+            "repetition_count": 2,
+            "pattern": "4,4,4,4"
+          }
+        ]
+      }
+    },
+    {
+      "Section": {
+        "name": "Intro A-I",
+        "patterns": [
+          {
+            "repetition_count": "*",
+            "pattern": "8,8,8,8,8,8,8,8"
+          }
+        ]
+      }
+    }
+  ]
+}
