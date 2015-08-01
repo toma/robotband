@@ -89,7 +89,7 @@ end
 
 puts ("AXEMAN-1 RIGHT HAND")
 # print_all_track_info('../data/VerseV_Axeman1_RH.mid')
-print_events('../data/VerseV_Axeman1_RH.mid')
+print_events('../data/TheGoldenRule.mid')
 # print_measure_event_mappings('../data/VerseV_Axeman1_RH.mid')
 
 puts ("AXEMAN-1 LEFT HAND")

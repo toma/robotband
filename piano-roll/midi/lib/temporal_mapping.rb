@@ -19,13 +19,23 @@ class TemporalMapping
 
   end
 
+  def build_neopixel_pattern()
+    num_pixels = 7
+    lighting_pattern = { "repetitions" => @sixteenths_per_measure}
+
+    (0..num_pixels-1).each { |i| lighting_pattern["pixel".concat(i.to_s)] = "0" }
+
+    lighting_pattern
+
+  end
+
   def self.json_create(o)
     # TODO: May need to tweek this. (Untested)
     new(*o['data'])
   end
 
   def to_json(*a)
-    { "tempo" => @tempo, "meter" => @meter, "picking_pattern" => [build_pattern()], "fret_hand_pattern" => [build_pattern] }.to_json(*a)
+    { "tempo" => @tempo, "meter" => @meter, "picking_pattern" => [build_pattern()], "fret_hand_pattern" => [build_pattern], "lighting_pattern" => [build_neopixel_pattern]}.to_json(*a)
   end
 
 end
