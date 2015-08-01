@@ -51,7 +51,7 @@ int PianoRoll::getValueFromString(String data, char separator, int index)
             strIndex[1] = (i == maxIndex) ? i+1 : i;
         }
     }
-    return found > index ? data.substring(strIndex[0], strIndex[1]).toInt() : -1;
+    return found > index ? data.substring(strIndex[0], strIndex[1]).toInt() : 0;
 }
 
 int PianoRoll::getDelay() {
@@ -74,10 +74,8 @@ unsigned char* PianoRoll::getStateSet() {
         rightArmMovement = getValueFromString(parsedLine, ',', 1);
 
         leftArmMovement = getValueFromString(parsedLine, ',', 2);
-        lightFlags = getValueFromString(parsedLine, ',', 3);
         for (unsigned char i = 0; i <= 6; i++) {
-            int lightValue = getValueFromString(parsedLine, ',', i + 4);
-            pixelColor[i] = (lightValue != -1) ? lightValue : 0;
+            pixelColor[i] = getValueFromString(parsedLine, ',', i + 3);
         }
 
         parsedLine = "";
@@ -89,17 +87,16 @@ unsigned char* PianoRoll::getStateSet() {
         stop();
     }
 
-	static unsigned char states[10];
+	static unsigned char states[9];
 	states[0] = rightArmMovement;
 	states[1] = leftArmMovement;
-    states[2] = lightFlags;
-    states[3] = pixelColor[0];
-    states[4] = pixelColor[1];
-    states[5] = pixelColor[2];
-    states[6] = pixelColor[3];
-    states[7] = pixelColor[4];
-    states[8] = pixelColor[5];
-    states[9] = pixelColor[6];
+    states[2] = pixelColor[0];
+    states[3] = pixelColor[1];
+    states[4] = pixelColor[2];
+    states[5] = pixelColor[3];
+    states[6] = pixelColor[4];
+    states[7] = pixelColor[5];
+    states[8] = pixelColor[6];
 
 	return states;
 }
@@ -113,5 +110,11 @@ void PianoRoll::stop() {
 	rightArmMovement = musician->getFinalState()[0];
 	leftArmMovement = musician->getFinalState()[1];
 
-    lightFlags = 0;
+    pixelColor[0] = 0;
+    pixelColor[1] = 0;
+    pixelColor[2] = 0;
+    pixelColor[3] = 0;
+    pixelColor[4] = 0;
+    pixelColor[5] = 0;
+    pixelColor[6] = 0;
 }

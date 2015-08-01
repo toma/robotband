@@ -20,8 +20,6 @@ private:
     int loopBPM = 100;
     unsigned char rightArmMovement;
     unsigned char leftArmMovement;
-    unsigned char lightFlags = 0;
-    uint32_t lightColor = 0;
     bool playingSong = false;
     unsigned char pixelColor[7];
     int getValueFromString(String data, char separator, int index);

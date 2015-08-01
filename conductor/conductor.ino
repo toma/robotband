@@ -7,7 +7,7 @@
 PianoRoll pianoRoll;
 extern Musician *musician;
 unsigned char *stateSet;
-unsigned char perPixelColors[10];
+unsigned char perPixelColors[7];
 unsigned char pixelFlags;
 
 String serialAction = "";
@@ -20,14 +20,6 @@ Adafruit_NeoPixel medallion = Adafruit_NeoPixel(7, lightPin, NEO_GRB + NEO_KHZ80
 uint32_t purple = medallion.Color(36, 28, 153);
 uint32_t blueish = medallion.Color(0, 0, 200);
 uint32_t off = medallion.Color(0, 0, 0);
-
-#define PIXEL_0     1
-#define PIXEL_1     2
-#define PIXEL_2     4
-#define PIXEL_3     8
-#define PIXEL_4     16
-#define PIXEL_5     32
-#define PIXEL_6     64
 
 void setup() {
     Serial.begin(9600); // For debugging
@@ -57,30 +49,23 @@ uint32_t getPixelColor(unsigned char pixelNumber) {
         case 2:
             return blueish;
         default:
-            return purple;
+            return off;
     }
 }
 
-void setPixelState(unsigned char flags, unsigned char pixelNumber, unsigned char definedPixel) {
-    if ((definedPixel & flags) == definedPixel) {
-        medallion.setPixelColor(pixelNumber, getPixelColor(pixelNumber));
-    } else {
-        medallion.setPixelColor(pixelNumber, off);
-    }
+void setPixelState(unsigned char pixelNumber) {
+    medallion.setPixelColor(pixelNumber, getPixelColor(pixelNumber));
 }
 
 // Fill the dots one after the other with a color
-void displayMedallion(unsigned char flags, unsigned char *perPixelColors) {
-//    Serial.print("FLAGS: ");
-//    Serial.println(flags);
-
-    setPixelState(flags, 0, PIXEL_0);
-    setPixelState(flags, 1, PIXEL_1);
-    setPixelState(flags, 2, PIXEL_2);
-    setPixelState(flags, 3, PIXEL_3);
-    setPixelState(flags, 4, PIXEL_4);
-    setPixelState(flags, 5, PIXEL_5);
-    setPixelState(flags, 6, PIXEL_6);
+void displayMedallion() {
+    setPixelState(0);
+    setPixelState(1);
+    setPixelState(2);
+    setPixelState(3);
+    setPixelState(4);
+    setPixelState(5);
+    setPixelState(6);
 
     medallion.show();
 }
@@ -109,16 +94,15 @@ void loop() {
 
     musician->setState(stateSet[0], stateSet[1]);
 
-    pixelFlags = stateSet[2];
-    perPixelColors[0] = stateSet[3];
-    perPixelColors[1] = stateSet[4];
-    perPixelColors[2] = stateSet[5];
-    perPixelColors[3] = stateSet[6];
-    perPixelColors[4] = stateSet[7];
-    perPixelColors[5] = stateSet[8];
-    perPixelColors[6] = stateSet[9];
+    perPixelColors[0] = stateSet[2];
+    perPixelColors[1] = stateSet[3];
+    perPixelColors[2] = stateSet[4];
+    perPixelColors[3] = stateSet[5];
+    perPixelColors[4] = stateSet[6];
+    perPixelColors[5] = stateSet[7];
+    perPixelColors[6] = stateSet[8];
 
-    displayMedallion(pixelFlags, perPixelColors);
+    displayMedallion();
 
     delay(pianoRoll.getDelay());
 
