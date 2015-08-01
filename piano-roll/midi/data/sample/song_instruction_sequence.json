@@ -1,21 +1,27 @@
 {
-  "SongInstructionSequence": [{
-    "Section": {
-      "name": "CountIn",
-      "temporal_mappings": [{
-        "TemporalMapping": {
-          "tempo": 75,
-          "meter": "4/4",
-          "picking_pattern": [{
-            "repetition_count": 4,
-            "pattern": "4,4,4,4"
-          }],
-          "fret_hand_pattern": [{
-            "repetition_count": 1,
-            "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-          }]
-        }
-    }]
+  "SongInstructionSequence": [
+    {
+      "Section": {
+        "name": "CountIn",
+        "temporal_mappings": [
+          {
+            "tempo": 75,
+            "meter": "4/4",
+            "picking_pattern": [
+              {
+                "repetition_count": 4,
+                "pattern": "4,4,4,4"
+              }
+            ],
+            "fret_hand_pattern": [
+              {
+                "repetition_count": 1,
+                "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              }
+            ]
+          }
+        ]
+      }
     }
-  }]
+  ]
 }

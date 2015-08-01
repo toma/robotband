@@ -27,7 +27,7 @@ class TemporalMapping
   end
 
   def to_json(*a)
-    { "tempo" => @tempo, "meter" => @meter, "picking_pattern" => build_pattern(), "fret_hand_pattern" => build_pattern }.to_json(*a)
+    { "tempo" => @tempo, "meter" => @meter, "picking_pattern" => [build_pattern()], "fret_hand_pattern" => [build_pattern] }.to_json(*a)
   end
 
 end
