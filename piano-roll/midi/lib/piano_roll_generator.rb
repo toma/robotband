@@ -30,9 +30,27 @@ class PianoRollGenerator
         mapping['fret_hand_pattern'].each do |pattern|
           fret_instructions.concat repeatSection(pattern['pattern'], pattern['repetitions'])
         end
-        
+
+        pixel0_instructions = []
+        pixel1_instructions = []
+        pixel2_instructions = []
+        pixel3_instructions = []
+        pixel4_instructions = []
+        pixel5_instructions = []
+        pixel6_instructions = []
+
+        mapping['lighting_pattern'].each do |pattern|
+
+          pixel0_instructions.concat repeatSection(pattern['pixel0'], pattern['repetitions'])
+          pixel1_instructions.concat repeatSection(pattern['pixel1'], pattern['repetitions'])
+          pixel2_instructions.concat repeatSection(pattern['pixel2'], pattern['repetitions'])
+          pixel3_instructions.concat repeatSection(pattern['pixel3'], pattern['repetitions'])
+          pixel4_instructions.concat repeatSection(pattern['pixel4'], pattern['repetitions'])
+          pixel5_instructions.concat repeatSection(pattern['pixel5'], pattern['repetitions'])
+          pixel6_instructions.concat repeatSection(pattern['pixel6'], pattern['repetitions'])
+        end
         tempoArray = Array.new(pick_instructions.length, mapping['tempo'])
-        pianoRollArray.concat tempoArray.zip(pick_instructions, fret_instructions)
+        pianoRollArray.concat tempoArray.zip(pick_instructions, fret_instructions, pixel0_instructions, pixel1_instructions, pixel2_instructions, pixel3_instructions, pixel4_instructions, pixel5_instructions, pixel6_instructions)
       end
     end
     pianoRollArray
