@@ -2,8 +2,8 @@ class SongInstructionSequence
 
   attr_accessor :sections
 
-  def initialize()
-    @sections = []
+  def initialize(sections)
+    @sections = sections
   end
 
   def add_section(section)
