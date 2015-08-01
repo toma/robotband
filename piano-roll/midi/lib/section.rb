@@ -38,7 +38,7 @@ class Section
   end
 
   def to_json(*a)
-    { self.class.name => name, "temporal_mappings" => temporal_mappings }.to_json(*a)
+    {self.class.name => name, "temporal_mappings" => temporal_mappings}.to_json(*a)
   end
 
   private
@@ -48,7 +48,7 @@ class Section
       tempo = @initial_tempo_mapping.bpm()
       meter = "#{@initial_meter.numerator}/#{@initial_meter.denominator}"
       sixteenths_per_measure = (16 / @initial_meter.denominator) * (@initial_meter.numerator)
-      repetitions = @initial_tempo_mapping.ticks_to_sixteenth_note_count(@duration_in_ticks) / sixteenths_per_measure
+      repetitions = (@initial_tempo_mapping.ticks_to_sixteenth_note_count(@duration_in_ticks) / sixteenths_per_measure).round.to_i
 
       @temporal_mappings << TemporalMapping.new(tempo, meter, repetitions, sixteenths_per_measure)
 
@@ -61,7 +61,7 @@ class Section
         tempo = @initial_tempo_mapping.bpm()
         meter = "#{ti.numerator}/#{ti.denominator}"
         sixteenths_per_measure = (16 / ti.denominator) * (ti.numerator)
-        repetitions = @initial_tempo_mapping.ticks_to_sixteenth_note_count(ti.ticks_from_start - section_tick_offset)
+        repetitions = (@initial_tempo_mapping.ticks_to_sixteenth_note_count(ti.ticks_from_start - section_tick_offset)).round.to_i
         section_tick_offset = ti.ticks_from_start
 
         @temporal_mappings << TemporalMapping.new(tempo, meter, repetitions, sixteenths_per_measure)

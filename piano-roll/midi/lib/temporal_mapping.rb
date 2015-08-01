@@ -21,7 +21,7 @@ class TemporalMapping
 
   def build_neopixel_pattern()
     num_pixels = 7
-    lighting_pattern = { "repetitions" => @sixteenths_per_measure}
+    lighting_pattern = { "repetitions" => @sixteenths_per_measure * @repetitions}
 
     (0..num_pixels-1).each { |i| lighting_pattern["pixel".concat(i.to_s)] = "0" }
 
