@@ -1,27 +1,605 @@
 {
   "SongInstructionSequence": [
     {
-      "Section": {
-        "name": "CountIn",
-        "temporal_mappings": [
-          {
-            "tempo": 75,
-            "meter": "4/4",
-            "picking_pattern": [
-              {
-                "repetition_count": 4,
-                "pattern": "4,4,4,4"
-              }
-            ],
-            "fret_hand_pattern": [
-              {
-                "repetition_count": 1,
-                "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-              }
-            ]
-          }
-        ]
-      }
+      "Section": "CountIn",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 2.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 2.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "IntroA-I",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "IntroB-I",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "6/4",
+          "picking_pattern": [
+            {
+              "repetitions": 5.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 5.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "IntroA-II",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "IntroB-II",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "6/4",
+          "picking_pattern": [
+            {
+              "repetitions": 5.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 5.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Verse1",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "7/8",
+          "picking_pattern": [
+            {
+              "repetitions": 8.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Verse1Break",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "7/8",
+          "picking_pattern": [
+            {
+              "repetitions": 2.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 2.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "VerseVox-II",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "7/8",
+          "picking_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "VersePhrygianShift",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "7/8",
+          "picking_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "ModalChordInterlude",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "6/4",
+          "picking_pattern": [
+            {
+              "repetitions": 9.958333333333334,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 9.958333333333334,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Verse2a",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Verse2b",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "6/4",
+          "picking_pattern": [
+            {
+              "repetitions": 5.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 5.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "HeyNobleOne",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "6/4",
+          "picking_pattern": [
+            {
+              "repetitions": 7.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 7.958333333333333,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "RiseTransition",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "DrivingRiff-I",
+      "temporal_mappings": [
+        {
+          "tempo": 72,
+          "meter": "9/16",
+          "picking_pattern": [
+            {
+              "repetitions": 24.0,
+              "pattern": "0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 24.0,
+              "pattern": "0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 72,
+          "meter": "2/4",
+          "picking_pattern": [
+            {
+              "repetitions": 9.0,
+              "pattern": "0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 9.0,
+              "pattern": "0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 72,
+          "meter": "9/16",
+          "picking_pattern": [
+            {
+              "repetitions": 24.0,
+              "pattern": "0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 24.0,
+              "pattern": "0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "DrivingRiff-II",
+      "temporal_mappings": [
+        {
+          "tempo": 72,
+          "meter": "17/16",
+          "picking_pattern": [
+            {
+              "repetitions": 39.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 39.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 72,
+          "meter": "13/16",
+          "picking_pattern": [
+            {
+              "repetitions": 17.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 17.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 72,
+          "meter": "18/16",
+          "picking_pattern": [
+            {
+              "repetitions": 39.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 39.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "WanderRiff",
+      "temporal_mappings": [
+        {
+          "tempo": 72,
+          "meter": "8/8",
+          "picking_pattern": [
+            {
+              "repetitions": 11.9375,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 11.9375,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "LightningEyes",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 239.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 239.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "WeWillRise",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Outro",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "7/8",
+          "picking_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 75,
+          "meter": "13/16",
+          "picking_pattern": [
+            {
+              "repetitions": 14.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 14.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 75,
+          "meter": "7/8",
+          "picking_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 75,
+          "meter": "13/16",
+          "picking_pattern": [
+            {
+              "repetitions": 14.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 14.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 75,
+          "meter": "7/8",
+          "picking_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 75,
+          "meter": "13/16",
+          "picking_pattern": [
+            {
+              "repetitions": 14.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 14.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        },
+        {
+          "tempo": 75,
+          "meter": "17/16",
+          "picking_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 13.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Finale",
+      "temporal_mappings": [
+        {
+          "tempo": 75,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 36.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 36.0,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

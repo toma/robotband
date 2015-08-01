@@ -18,20 +18,20 @@ class PianoRollGenerator
     pianoRollArray = []
 
     instructionSet["SongInstructionSequence"].each do |section|
-      puts "Parsing Section #{section["Section"]["name"]}"
-      
-      section['Section']['temporal_mappings'].each do |mapping|
+      puts "Parsing Section #{section["Section"]}"
+
+      section['temporal_mappings'].each do |mapping|
         pick_instructions = []
-        mapping['TemporalMapping']['picking_pattern'].each do |pattern|
-          pick_instructions.concat repeatSection(pattern['pattern'], pattern['repetition_count'])
+        mapping['picking_pattern'].each do |pattern|
+          pick_instructions.concat repeatSection(pattern['pattern'], pattern['repetitions'])
         end
         
         fret_instructions = []
-        mapping['TemporalMapping']['fret_hand_pattern'].each do |pattern|
-          fret_instructions.concat repeatSection(pattern['pattern'], pattern['repetition_count'])
+        mapping['fret_hand_pattern'].each do |pattern|
+          fret_instructions.concat repeatSection(pattern['pattern'], pattern['repetitions'])
         end
         
-        tempoArray = Array.new(pick_instructions.length, mapping['TemporalMapping']['tempo'])
+        tempoArray = Array.new(pick_instructions.length, mapping['tempo'])
         pianoRollArray.concat tempoArray.zip(pick_instructions, fret_instructions)
       end
     end
