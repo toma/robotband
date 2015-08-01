@@ -26,7 +26,7 @@ class Section
     @temporal_infos << mapping
   end
 
-  # TODO: Try to separate two for pipeline processing. Must guarantee close is called before process!
+  # TODO: Try to separate these two for pipeline processing. Must guarantee close is called before process!
   def close_and_process(next_section_ticks_from_start)
     @duration_in_ticks = next_section_ticks_from_start - @ticks_from_start
     process()

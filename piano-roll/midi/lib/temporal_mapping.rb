@@ -1,7 +1,5 @@
 class TemporalMapping
 
-  # attr_accessor :tempo, :meter
-
   def initialize(tempo, meter, repetitions, sixteenths_per_measure)
     @tempo = tempo
     @meter = meter
