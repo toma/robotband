@@ -1,64 +1,21 @@
 {
-  "SongInstructionSequence": [
-    {
-      "Section": {
-        "name": "CountIn",
-        "picking_patterns": [
-          {
-            "meter": "4/4",
-            "tempo": 75,
-            "repetition_count": 2,
+  "SongInstructionSequence": [{
+    "Section": {
+      "name": "CountIn",
+      "temporal_mappings": [{
+        "TemporalMapping": {
+          "tempo": 75,
+          "meter": "4/4",
+          "picking_pattern": [{
+            "repetition_count": 4,
             "pattern": "4,4,4,4"
-          }
-        ],
-        "fret_hand_patterns": [
-          {
-            "meter": "4/4",
-            "tempo": 75,
+          }],
+          "fret_hand_pattern": [{
             "repetition_count": 1,
-            "pattern": "0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0"
-          }
-        ]
-      }
-    },
-    {
-      "Section": {
-        "name": "Intro A-I",
-        "picking_patterns": [
-          {
-            "meter": "6/4",
-            "tempo": 75,
-            "repetition_count": 6,
-            "pattern": "8,8,8,8,8,8,8,8"
-          }
-        ],
-        "fret_hand_patterns": [
-          {
-            "meter": "6/4",
-            "tempo": 75,
-            "repetition_count": 1,
-            "pattern": "0|7,0|7,0|7,0|7,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|5,0|5,0|5,0|5"
-          },
-          {
-            "meter": "6/4",
-            "tempo": 75,
-            "repetition_count": 1,
-            "pattern": "0|7,0|7,0|7,0|7,0|7,0|7,0|7,0|7,0|11,0|11,0|11,0|11,0|9,0|9,0|9,0|9"
-          },
-          {
-            "meter": "6/4",
-            "tempo": 75,
-            "repetition_count": 1,
-            "pattern": "0|7,0|7,0|7,0|7,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|9,0|5,0|5,0|5,0|5"
-          },
-          {
-            "meter": "6/4",
-            "tempo": 75,
-            "repetition_count": 1,
-            "pattern": "0|7,0|7,0|7,0|7,0|5,0|5,0|5,0|5,0|3,0|3,0|3,0|3,0|1,0|1,0|1,0|1"
-          }
-        ]
-      }
+            "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+          }]
+        }
+    }]
     }
-  ]
+  }]
 }
