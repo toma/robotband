@@ -10,17 +10,12 @@ public:
 	void loadSong(String songName);
 	int getDelay();
 	unsigned char* getStateSet();
-	void readLine();
 	void stop();
 	void overrideBPM(int bpm);
 private:
     int overriddenBPM = 0;
     unsigned char index = 0;
-    String parsedBPM;
-    String parsedRightArm;
-    String parsedLeftArm;
-    String parsedLightFlags;
-    String parsedLightColor;
+    String parsedLine;
     char inputChar;
     int loopBPM = 100;
     unsigned char rightArmMovement;
@@ -28,6 +23,8 @@ private:
     unsigned char lightFlags = 0;
     uint32_t lightColor = 0;
     bool playingSong = false;
+    unsigned char pixelColor[7];
+    int getValueFromString(String data, char separator, int index);
 };
 
 #endif

@@ -39,54 +39,19 @@ void PianoRoll::loadSong(String songName) {
 	}
 }
 
-void PianoRoll::readLine() {
-
-	if (instructionFile.available() != 0) {
-		playingSong = true;
-		inputChar = instructionFile.peek();
-		while (inputChar != '\n') {
-			inputChar = instructionFile.read();
-
-			if (index == 0 && inputChar != ',') {
-				parsedBPM += (String) inputChar;
-			} else if (index == 1 && inputChar != ',') {
-				parsedRightArm += (String) inputChar;
-			} else if (index == 2 && inputChar != ',') {
-				parsedLeftArm += (String) inputChar;
-			} else if (index == 3 && inputChar != ',') {
-                parsedLightFlags += (String) inputChar;
-            } else if (index == 4 && inputChar != ',') {
-                parsedLightColor += (String) inputChar;
-            }
-
-			if (inputChar == ',') {
-				index++;
-			}
-		}
-
-		index = 0;
-
-        if (overriddenBPM == 0) {
-            loopBPM = parsedBPM.toInt();
-        } else {
-            loopBPM = overriddenBPM;
+int PianoRoll::getValueFromString(String data, char separator, int index)
+{
+    int found = 0;
+    int strIndex[] = { 0, -1 };
+    int maxIndex = data.length()-1;
+    for(int i=0; i<=maxIndex && found<=index; i++){
+        if(data.charAt(i)==separator || i==maxIndex){
+            found++;
+            strIndex[0] = strIndex[1]+1;
+            strIndex[1] = (i == maxIndex) ? i+1 : i;
         }
-		rightArmMovement = parsedRightArm.toInt();
-		leftArmMovement = parsedLeftArm.toInt();
-        lightFlags = parsedLightFlags.toInt();
-        lightColor = parsedLightColor.toInt();
-
-		parsedBPM = "";
-		parsedRightArm = "";
-		parsedLeftArm = "";
-        parsedLightFlags = "";
-        parsedLightColor = "";
-	} else if (playingSong && instructionFile.available() == 0) {
-        overriddenBPM = 0;
-		playingSong = false;
-		Serial.println("Song finished");
-		stop();
-	}
+    }
+    return found > index ? data.substring(strIndex[0], strIndex[1]).toInt() : -1;
 }
 
 int PianoRoll::getDelay() {
@@ -94,11 +59,47 @@ int PianoRoll::getDelay() {
 }
 
 unsigned char* PianoRoll::getStateSet() {
-	static unsigned char states[4];
+
+    if (instructionFile.available() != 0) {
+        playingSong = true;
+
+        parsedLine = instructionFile.readStringUntil('\n');
+
+        if (overriddenBPM == 0) {
+            loopBPM = getValueFromString(parsedLine, ',', 0);
+        } else {
+            loopBPM = overriddenBPM;
+        }
+
+        rightArmMovement = getValueFromString(parsedLine, ',', 1);
+
+        leftArmMovement = getValueFromString(parsedLine, ',', 2);
+        lightFlags = getValueFromString(parsedLine, ',', 3);
+        for (unsigned char i = 0; i <= 6; i++) {
+            int lightValue = getValueFromString(parsedLine, ',', i + 4);
+            pixelColor[i] = (lightValue != -1) ? lightValue : 0;
+        }
+
+        parsedLine = "";
+
+    } else if (playingSong && instructionFile.available() == 0) {
+        overriddenBPM = 0;
+        playingSong = false;
+        Serial.println("Song finished");
+        stop();
+    }
+
+	static unsigned char states[10];
 	states[0] = rightArmMovement;
 	states[1] = leftArmMovement;
     states[2] = lightFlags;
-    states[3] = lightColor;
+    states[3] = pixelColor[0];
+    states[4] = pixelColor[1];
+    states[5] = pixelColor[2];
+    states[6] = pixelColor[3];
+    states[7] = pixelColor[4];
+    states[8] = pixelColor[5];
+    states[9] = pixelColor[6];
 
 	return states;
 }
@@ -111,4 +112,6 @@ void PianoRoll::stop() {
 
 	rightArmMovement = musician->getFinalState()[0];
 	leftArmMovement = musician->getFinalState()[1];
+
+    lightFlags = 0;
 }
