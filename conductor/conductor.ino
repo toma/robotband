@@ -17,8 +17,15 @@ String inputString = "";
 int lightPin = 8;
 Adafruit_NeoPixel medallion = Adafruit_NeoPixel(7, lightPin, NEO_GRB + NEO_KHZ800);
 
-uint32_t purple = medallion.Color(36, 28, 153);
-uint32_t blueish = medallion.Color(0, 0, 200);
+uint32_t dimWhite = medallion.Color(200, 200, 255);
+uint32_t darkTeal = medallion.Color(0, 45, 45);
+uint32_t brightTeal = medallion.Color(0, 255, 255);
+uint32_t purple = medallion.Color(255, 0, 255);
+uint32_t violet = medallion.Color(125, 0, 255);
+uint32_t red = medallion.Color(255, 0, 0);
+uint32_t fireRed = medallion.Color(255, 30, 15);
+uint32_t gold = medallion.Color(175, 100, 0);
+
 uint32_t off = medallion.Color(0, 0, 0);
 
 void setup() {
@@ -45,9 +52,21 @@ uint32_t getPixelColor(unsigned char pixelNumber) {
         case 0:
             return off;
         case 1:
-            return purple;
+            return dimWhite;
         case 2:
-            return blueish;
+            return darkTeal;
+        case 3:
+            return brightTeal;
+        case 4:
+            return purple;
+        case 5:
+            return violet;
+        case 6:
+            return red;
+        case 7:
+            return fireRed;
+        case 8:
+            return gold;
         default:
             return off;
     }
