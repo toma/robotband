@@ -45,27 +45,26 @@ class Section
 
   def process()
     if (@temporal_infos.empty?)
-      tempo = @initial_tempo_mapping.bpm()
-      meter = "#{@initial_meter.numerator}/#{@initial_meter.denominator}"
-      sixteenths_per_measure = (16 / @initial_meter.denominator) * (@initial_meter.numerator)
-      repetitions = (@initial_tempo_mapping.ticks_to_sixteenth_note_count(@duration_in_ticks) / sixteenths_per_measure).round.to_i
-
-      @temporal_mappings << TemporalMapping.new(tempo, meter, repetitions, sixteenths_per_measure)
-
+      @temporal_mappings << build_temporal_mapping(@initial_meter.numerator, @initial_meter.denominator, @duration_in_ticks)
     else
       # NOTE: The assumption is that all tempo changes coincide with section markers. Therefore, meter changes are the only
       #       temporal events memoized within a section.
+
       section_tick_offset = @ticks_from_start
-
       @temporal_infos.each { |ti|
-        tempo = @initial_tempo_mapping.bpm()
-        meter = "#{ti.numerator}/#{ti.denominator}"
-        sixteenths_per_measure = (16 / ti.denominator) * (ti.numerator)
-        repetitions = (@initial_tempo_mapping.ticks_to_sixteenth_note_count(ti.ticks_from_start - section_tick_offset)).round.to_i
+        @temporal_mappings << build_temporal_mapping(ti.numerator, ti.denominator, (ti.ticks_from_start - section_tick_offset))
         section_tick_offset = ti.ticks_from_start
-
-        @temporal_mappings << TemporalMapping.new(tempo, meter, repetitions, sixteenths_per_measure)
       }
     end
+  end
+
+  def build_temporal_mapping(meter_numerator, meter_denominator, duration_in_ticks)
+    tempo = @initial_tempo_mapping.bpm()
+    meter = "#{meter_numerator}/#{meter_denominator}"
+    sixteenths_per_measure = (16 / meter_denominator) * (meter_numerator)
+    repetitions = (@initial_tempo_mapping.ticks_to_sixteenth_note_count(duration_in_ticks) / sixteenths_per_measure).round.to_i
+
+    TemporalMapping.new(tempo, meter, repetitions, sixteenths_per_measure)
+
   end
 end

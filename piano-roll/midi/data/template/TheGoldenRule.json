@@ -1,0 +1,631 @@
+{
+  "SongInstructionSequence": [
+    {
+      "Section": "CountIn",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "IntroA",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "IntroB",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Verse1",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 256,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Bridge1",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Chorus1",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Post1",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Verse2Intro",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Verse2",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 256,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Bridge2",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Chorus2",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Post2",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Interlude1",
+      "temporal_mappings": [
+        {
+          "tempo": 122,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 20,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 20,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 320,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Interlude2",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Interlude2VocalEntry",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Interlude2StringSolo",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Interlude2Climax",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 160,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Finale",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "7/4",
+          "picking_pattern": [
+            {
+              "repetitions": 14,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 14,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 392,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "FinalHit",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "7/4",
+          "picking_pattern": [
+            {
+              "repetitions": 4,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 4,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 112,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

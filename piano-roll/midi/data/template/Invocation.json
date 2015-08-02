@@ -1,0 +1,235 @@
+{
+  "SongInstructionSequence": [
+    {
+      "Section": "CountIn",
+      "temporal_mappings": [
+        {
+          "tempo": 91,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 2,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 2,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Start",
+      "temporal_mappings": [
+        {
+          "tempo": 91,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 192,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Solo",
+      "temporal_mappings": [
+        {
+          "tempo": 91,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 11,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 11,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 132,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Groove",
+      "temporal_mappings": [
+        {
+          "tempo": 91,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 96,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "GroovePhrase2",
+      "temporal_mappings": [
+        {
+          "tempo": 91,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 120,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "GroovePhrase3",
+      "temporal_mappings": [
+        {
+          "tempo": 91,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 96,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "GroovePhrase4",
+      "temporal_mappings": [
+        {
+          "tempo": 91,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 120,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

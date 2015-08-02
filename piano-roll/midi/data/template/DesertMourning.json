@@ -1,0 +1,499 @@
+{
+  "SongInstructionSequence": [
+    {
+      "Section": "CountIn",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 6,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 6,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 96,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Intro",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 28,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 28,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 448,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "1st Verse",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 12,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 12,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 192,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "PointMyGun",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 55,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 55,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 880,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "2nd Verse",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 12,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 12,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 192,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Transition 1",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 12,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 12,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 192,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "no time",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 15,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 15,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 240,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "AshAndSmoke",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 20,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 20,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 320,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "DriftAwaySeasOfSand",
+      "temporal_mappings": [
+        {
+          "tempo": 120,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 30,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 30,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 480,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "MotherInterlude",
+      "temporal_mappings": [
+        {
+          "tempo": 148,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 10,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 160,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "MotherVoxEntry",
+      "temporal_mappings": [
+        {
+          "tempo": 148,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 29,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 29,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 464,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "LookIntoMyEye",
+      "temporal_mappings": [
+        {
+          "tempo": 192,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 23,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 23,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 368,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Outo Verse",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Finale",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 128,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "Last Hit",
+      "temporal_mappings": [
+        {
+          "tempo": 196,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 23,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 23,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 368,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
