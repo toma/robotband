@@ -4,7 +4,7 @@
       "Section": "CountIn",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -37,7 +37,7 @@
       "Section": "IntroA",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -70,7 +70,7 @@
       "Section": "IntroB",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -103,7 +103,7 @@
       "Section": "Verse1",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -136,7 +136,7 @@
       "Section": "Bridge1",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -169,7 +169,7 @@
       "Section": "Chorus1",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -202,7 +202,7 @@
       "Section": "Post1",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -235,7 +235,7 @@
       "Section": "Verse2Intro",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -268,7 +268,7 @@
       "Section": "Verse2",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -301,7 +301,7 @@
       "Section": "Bridge2",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -334,7 +334,7 @@
       "Section": "Chorus2",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -367,7 +367,7 @@
       "Section": "Post2",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -400,7 +400,7 @@
       "Section": "Interlude1",
       "temporal_mappings": [
         {
-          "tempo": 122,
+          "tempo": 123,
           "meter": "4/4",
           "picking_pattern": [
             {
