@@ -13,7 +13,7 @@ class TemporalMapping
 
     pattern = ""
     (1..@sixteenths_per_measure).each { pattern.concat("0,")}
-    picking_pattern[:pattern] = pattern.slice(0..pattern.length-2)
+    picking_pattern[:pattern] = pattern.slice(0..pattern.length - 2)
 
     picking_pattern
 
@@ -23,7 +23,7 @@ class TemporalMapping
     num_pixels = 7
     lighting_pattern = { "repetitions" => @sixteenths_per_measure * @repetitions}
 
-    (0..num_pixels-1).each { |i| lighting_pattern["pixel".concat(i.to_s)] = "0" }
+    (0..num_pixels - 1).each { |i| lighting_pattern["pixel".concat(i.to_s)] = "0" }
 
     lighting_pattern
 

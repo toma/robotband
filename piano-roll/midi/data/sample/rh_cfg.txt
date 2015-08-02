@@ -1,21 +1,3 @@
-
 section_marker -> [a-zA-Z]*
 repetition -> [0-9]* | '*'
 pluck_duration -> 0 | 4 | 8 | 16
-
-{ section_marker [repetition (pluck_duration,pluck_duration*) ] *}
-
-# Example Usage:
-
-{ CountIn [2(4,4,4,4)] }
-
-{ Intro A1 [4(8,8,8,8,8,8,8,8)] }
-
-{ Section II [6 (8,8,8,8,8,8,8,8,8,8,8,8) ] }
-
-{ Section III [4 (8,8,8,8,8,8,8,8) ] }
-
-{ Section IV [* (8,8,8,8,8,8,8,8,8,8,8,8) ] }
-
-# TODO: THIS IS NOT COMPLETE
-{ Section V [2 (16,0,0,16,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) ] }
