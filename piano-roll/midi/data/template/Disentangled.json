@@ -36,24 +36,141 @@
     {
       "Section": "IntroPickup",
       "temporal_mappings": [
+        //  INTRO:              12/16       17/16       12/16     13/16   4/16
+        // (2)
+        // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
+        // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (37/16)
+        // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "12/16",
           "picking_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 128,
+              "repetitions": 12,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "17/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 17,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "12/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 12,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "13/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 13,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "4/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 4,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -68,25 +185,168 @@
     },
     {
       "Section": "1st Verse",
+      // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
+      // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (37/16)
+      // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "24/16",
           "picking_pattern": [
             {
-              "repetitions": 22,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 22,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 352,
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "37/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 37,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "29/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 29,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "24/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "37/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 37,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "29/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 29,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -134,25 +394,140 @@
     },
     {
       "Section": "LittleBoy-I",
+      // PATTERN-D 232232 3223223223   14+24
+      // PATTERN-E 232232 3223333  23223 14+17+12
+      // CADENCE REST 23223
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "14/16",
           "picking_pattern": [
             {
-              "repetitions": 10,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 10,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 160,
+              "repetitions": 14,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "24/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "14/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 14,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "17/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 17,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "12/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 12,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -170,22 +545,162 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "14/16",
           "picking_pattern": [
             {
-              "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 192,
+              "repetitions": 14,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "24/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "14/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 14,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "17/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 17,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "12/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 12,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "12/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 12,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -203,22 +718,22 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "15/16",
           "picking_pattern": [
             {
-              "repetitions": 15,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 15,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 240,
+              "repetitions": 120,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -236,17 +751,17 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "3/4",
           "picking_pattern": [
             {
-              "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 16,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
@@ -269,22 +784,107 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "3/4",
           "picking_pattern": [
             {
-              "repetitions": 13,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 13,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 208,
+              "repetitions": 96, //208
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "3/4",
+          "picking_pattern": [
+            {
+              "repetitions": 6,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 6,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 96, //208
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        // 323 223 23223 232 15+19
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "19/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 19,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -302,22 +902,162 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "24/16",
           "picking_pattern": [
             {
-              "repetitions": 11,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 11,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 176,
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "37/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 37,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "29/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 29,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "24/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "37/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 37,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "29/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 29,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -331,26 +1071,26 @@
       ]
     },
     {
-      "Section": "Verse2b",
+      "Section": "DidntMommyTell-II",
       "temporal_mappings": [
         {
           "tempo": 160,
           "meter": "4/4",
           "picking_pattern": [
             {
-              "repetitions": 11,
+              "repetitions": 6,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 11,
+              "repetitions": 6,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 176,
+              "repetitions": 96,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -364,26 +1104,29 @@
       ]
     },
     {
-      "Section": "Pre-Pre 2",
+      "Section": "LittleBoy-I",
+      // PATTERN-D 232232 3223223223   14+24
+      // PATTERN-E 232232 3223333  23223 14+17+12
+      // CADENCE REST 23223
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "14/16",
           "picking_pattern": [
             {
-              "repetitions": 4,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 4,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 64,
+              "repetitions": 14,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -393,30 +1136,25 @@
               "pixel6": "0"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Section": "Location 15",
-      "temporal_mappings": [
+        },
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "24/16",
           "picking_pattern": [
             {
-              "repetitions": 2,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 2,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 32,
+              "repetitions": 24,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -426,30 +1164,25 @@
               "pixel6": "0"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Section": "LittleBoy-IIA",
-      "temporal_mappings": [
+        },
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "14/16",
           "picking_pattern": [
             {
-              "repetitions": 11,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 11,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 176,
+              "repetitions": 14,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -459,30 +1192,226 @@
               "pixel6": "0"
             }
           ]
-        }
-      ]
-    },
-    {
-      "Section": "LittleBoy-IIb",
-      "temporal_mappings": [
+        },
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "17/16",
           "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 17,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "12/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
             {
               "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "LittleBoy-IB",
+      "temporal_mappings": [
+        {
+          "tempo": 160,
+          "meter": "14/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 192,
+              "repetitions": 14,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "24/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 24,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "14/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 14,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "17/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 17,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "12/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 12,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "12/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 12,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -500,22 +1429,22 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "15/16",
           "picking_pattern": [
             {
-              "repetitions": 15,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 15,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 240,
+              "repetitions": 120,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -731,22 +1660,22 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "15/16",
           "picking_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 4,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 4,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 128,
+              "repetitions": 60,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -760,26 +1689,26 @@
       ]
     },
     {
-      "Section": "FinalChorus",
+      "Section": "Final Chorus",
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "15/16",
           "picking_pattern": [
             {
-              "repetitions": 15,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 15,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 240,
+              "repetitions": 120,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -794,25 +1723,82 @@
     },
     {
       "Section": "Outro",
+      // 32232 (3223 2232) (32232 32232 2) 12+19+24 + 2
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "12/16",
           "picking_pattern": [
             {
-              "repetitions": 7,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 7,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 112,
+              "repetitions": 12,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "19/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 19,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "24/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 24,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -833,19 +1819,19 @@
           "meter": "4/4",
           "picking_pattern": [
             {
-              "repetitions": 3,
+              "repetitions": 1,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 3,
+              "repetitions": 1,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 48,
+              "repetitions": 16,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
