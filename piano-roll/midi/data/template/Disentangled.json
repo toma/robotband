@@ -37,17 +37,13 @@
       "Section": "IntroPickup",
       "temporal_mappings": [
         //  INTRO:              12/16       17/16       12/16     13/16   4/16
-        // (2)
-        // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
-        // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (37/16)
-        // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
         {
           "tempo": 160,
           "meter": "12/16",
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -75,7 +71,7 @@
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,16,16,0,16,0,16,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -103,7 +99,7 @@
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -127,50 +123,22 @@
         },
         {
           "tempo": 160,
-          "meter": "13/16",
+          "meter": "17/16",
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,16,16,16,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 13,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
-            }
-          ]
-        },
-        {
-          "tempo": 160,
-          "meter": "4/16",
-          "picking_pattern": [
-            {
-              "repetitions": 1,
-              "pattern": "0,0,0,0"
-            }
-          ],
-          "fret_hand_pattern": [
-            {
-              "repetitions": 1,
-              "pattern": "0,0,0,0"
-            }
-          ],
-          "lighting_pattern": [
-            {
-              "repetitions": 4,
+              "repetitions": 17,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -185,17 +153,15 @@
     },
     {
       "Section": "1st Verse",
-      // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
-      // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (37/16)
-      // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
       "temporal_mappings": [
         {
           "tempo": 160,
           "meter": "24/16",
           "picking_pattern": [
             {
+              // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,16,16,0,16,0,0,16,0,16,0,16,0,16,16,16"
             }
           ],
           "fret_hand_pattern": [
@@ -219,11 +185,12 @@
         },
         {
           "tempo": 160,
-          "meter": "37/16",
+          "meter": "34/16",
           "picking_pattern": [
             {
+              // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (34/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,8,8,0,8,8,0,8,8,8,8"
             }
           ],
           "fret_hand_pattern": [
@@ -234,7 +201,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 37,
+              "repetitions": 34,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -250,8 +217,9 @@
           "meter": "29/16",
           "picking_pattern": [
             {
+              // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -278,8 +246,9 @@
           "meter": "24/16",
           "picking_pattern": [
             {
+              // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,16,16,0,16,0,0,16,0,16,0,16,0,16,16,16"
             }
           ],
           "fret_hand_pattern": [
@@ -303,11 +272,12 @@
         },
         {
           "tempo": 160,
-          "meter": "37/16",
+          "meter": "34/16",
           "picking_pattern": [
             {
+              // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (34/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,8,8,0,8,8,0,8,8,8,8"
             }
           ],
           "fret_hand_pattern": [
@@ -318,7 +288,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 37,
+              "repetitions": 34,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -334,8 +304,9 @@
           "meter": "29/16",
           "picking_pattern": [
             {
+              // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -363,23 +334,81 @@
       "Section": "DidntMommyTell-I",
       "temporal_mappings": [
         {
+          // 33322 (32232232) 33322 (32)
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "13/16",
           "picking_pattern": [
             {
-              "repetitions": 6,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "16,0,16,16,0,16,16,0,16,16,16,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 6,
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 13,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },        {
+          // 33322 (32232232) 33322 (32)
+          "tempo": 160,
+          "meter": "19/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 19,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          // 33322 (32232232) 33322 (32)
+          "tempo": 160,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "16,0,16,16,0,16,16,0,16,16,16,16,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 96,
+              "repetitions": 16,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -395,7 +424,7 @@
     {
       "Section": "LittleBoy-I",
       // PATTERN-D 232232 3223223223   14+24
-      // PATTERN-E 232232 3223333  23223 14+17+12
+      // PATTERN-E 232232 3223333  23223 14+19+12
       // CADENCE REST 23223
       "temporal_mappings": [
         {
@@ -404,7 +433,7 @@
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -430,9 +459,9 @@
           "tempo": 160,
           "meter": "24/16",
           "picking_pattern": [
-            {
+            { // 3223223223
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,16,0,16,0,16,0,0,16,0,16,0,16,0,0"
             }
           ],
           "fret_hand_pattern": [
@@ -458,9 +487,9 @@
           "tempo": 160,
           "meter": "14/16",
           "picking_pattern": [
-            {
+            { // 232232
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -484,11 +513,12 @@
         },
         {
           "tempo": 160,
-          "meter": "17/16",
+          "meter": "19/16",
           "picking_pattern": [
             {
+              // 232232 3223333  23223 14+19+1
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,8,8,0,8,8,0,8,8,0"
             }
           ],
           "fret_hand_pattern": [
@@ -499,7 +529,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 17,
+              "repetitions": 19,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -549,7 +579,7 @@
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -575,9 +605,9 @@
           "tempo": 160,
           "meter": "24/16",
           "picking_pattern": [
-            {
+            { // 3223223223
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,16,0,16,0,16,0,0,16,0,16,0,16,0,0"
             }
           ],
           "fret_hand_pattern": [
@@ -603,9 +633,9 @@
           "tempo": 160,
           "meter": "14/16",
           "picking_pattern": [
-            {
+            { // 232232
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -629,11 +659,12 @@
         },
         {
           "tempo": 160,
-          "meter": "17/16",
+          "meter": "19/16",
           "picking_pattern": [
             {
+              // 3223333
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,8,8,0,8,8,0,8,8,0"
             }
           ],
           "fret_hand_pattern": [
@@ -644,7 +675,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 17,
+              "repetitions": 19,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -721,19 +752,215 @@
           "meter": "15/16",
           "picking_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 8,
+              "repetitions": 1,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 120,
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,0,0,8,8"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,8,8,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -749,19 +976,19 @@
     {
       "Section": "interlude 1",
       "temporal_mappings": [
-        {
+        { // 32232 32232
           "tempo": 160,
-          "meter": "3/4",
+          "meter": "6/4",
           "picking_pattern": [
-            {
-              "repetitions": 16,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            { // 32232 32232
+              "repetitions": 8,
+              "pattern": "8,8,0,16,16,16,0,8,8,16,16,0,8,8,16,16,0,8,8,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 16,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 8,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
@@ -784,22 +1011,23 @@
       "temporal_mappings": [
         {
           "tempo": 160,
-          "meter": "3/4",
+          "meter": "6/4",
           "picking_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 4,
+              "pattern": "8,8,0,16,16,16,16,8,8,0,16,16,8,8,0,16,16,16,16,8,8,0,16,16"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 4,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 96, //208
+              "repetitions": 96,
+              //208
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -812,22 +1040,23 @@
         },
         {
           "tempo": 160,
-          "meter": "3/4",
+          "meter": "6/4",
           "picking_pattern": [
             {
-              "repetitions": 6,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "8,8,0,16,16,16,16,8,8,0,16,16,8,8,0,16,16,16,16,8,8,0,16,16"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 6,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 96, //208
+              "repetitions": 24,
+              //208
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -838,20 +1067,20 @@
             }
           ]
         },
-        // 323 223 23223 232 15+19
+        // 323 223 (15)
         {
           "tempo": 160,
           "meter": "15/16",
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,8,8,8,8,8,8,0,16,0,8,8,0"
             }
           ],
           "fret_hand_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
@@ -867,13 +1096,13 @@
             }
           ]
         },
-        {
+        { // 232232 (32) 19
           "tempo": 160,
           "meter": "19/16",
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,8,8,8,8,8,8,0,16,16,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
@@ -905,8 +1134,9 @@
           "meter": "24/16",
           "picking_pattern": [
             {
+              // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,16,16,0,16,0,0,16,0,16,0,16,0,16,16,16"
             }
           ],
           "fret_hand_pattern": [
@@ -930,11 +1160,12 @@
         },
         {
           "tempo": 160,
-          "meter": "37/16",
+          "meter": "34/16",
           "picking_pattern": [
             {
+              // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (34/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,8,8,0,8,8,0,8,8,8,8"
             }
           ],
           "fret_hand_pattern": [
@@ -945,7 +1176,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 37,
+              "repetitions": 34,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -961,8 +1192,9 @@
           "meter": "29/16",
           "picking_pattern": [
             {
+              // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -989,8 +1221,9 @@
           "meter": "24/16",
           "picking_pattern": [
             {
+              // PATTERN-A: 3+2+2 3+2 3+2+2 3+2 (24/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,16,16,0,16,0,0,16,0,16,0,16,0,16,16,16"
             }
           ],
           "fret_hand_pattern": [
@@ -1014,11 +1247,12 @@
         },
         {
           "tempo": 160,
-          "meter": "37/16",
+          "meter": "34/16",
           "picking_pattern": [
             {
+              // PATTERN-B: 3+2+2 3+2 3+2+2 3+2 3+3+2+2  (34/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,8,8,0,8,8,0,8,8,8,8"
             }
           ],
           "fret_hand_pattern": [
@@ -1029,7 +1263,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 37,
+              "repetitions": 34,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1045,8 +1279,9 @@
           "meter": "29/16",
           "picking_pattern": [
             {
+              // PATTERN-C: 3+2+2+3+2 3+2+2+3+2+3+2 (29/16)
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0,16,0,16,0,0,16,0,16,0,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1074,23 +1309,81 @@
       "Section": "DidntMommyTell-II",
       "temporal_mappings": [
         {
+          // 33322 (32232232) 33322 (32)
           "tempo": 160,
-          "meter": "4/4",
+          "meter": "13/16",
           "picking_pattern": [
             {
-              "repetitions": 6,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "16,0,16,16,0,16,16,0,16,16,16,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 6,
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 13,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },        {
+          // 33322 (32232232) 33322 (32)
+          "tempo": 160,
+          "meter": "19/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 19,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          // 33322 (32232232) 33322 (32)
+          "tempo": 160,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "16,0,16,16,0,16,16,0,16,16,16,16,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 96,
+              "repetitions": 16,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1104,9 +1397,9 @@
       ]
     },
     {
-      "Section": "LittleBoy-I",
+      "Section": "LittleBoy-II",
       // PATTERN-D 232232 3223223223   14+24
-      // PATTERN-E 232232 3223333  23223 14+17+12
+      // PATTERN-E 232232 3223333  23223 14+19+12
       // CADENCE REST 23223
       "temporal_mappings": [
         {
@@ -1115,7 +1408,7 @@
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1141,9 +1434,9 @@
           "tempo": 160,
           "meter": "24/16",
           "picking_pattern": [
-            {
+            { // 3223223223
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,16,0,16,0,16,0,0,16,0,16,0,16,0,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1169,9 +1462,9 @@
           "tempo": 160,
           "meter": "14/16",
           "picking_pattern": [
-            {
+            { // 232232
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1195,11 +1488,12 @@
         },
         {
           "tempo": 160,
-          "meter": "17/16",
+          "meter": "19/16",
           "picking_pattern": [
             {
+              // 232232 3223333  23223 14+19+1
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,8,8,0,8,8,0,8,8,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1210,7 +1504,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 17,
+              "repetitions": 19,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1252,7 +1546,7 @@
       ]
     },
     {
-      "Section": "LittleBoy-IB",
+      "Section": "LittleBoy-IIB",
       "temporal_mappings": [
         {
           "tempo": 160,
@@ -1260,7 +1554,7 @@
           "picking_pattern": [
             {
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1286,9 +1580,9 @@
           "tempo": 160,
           "meter": "24/16",
           "picking_pattern": [
-            {
+            { // 3223223223
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,16,0,16,0,16,0,0,16,0,16,0,16,0,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1314,9 +1608,9 @@
           "tempo": 160,
           "meter": "14/16",
           "picking_pattern": [
-            {
+            { // 232232
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,0,16,0,16,0,8,8,0,16,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1340,11 +1634,12 @@
         },
         {
           "tempo": 160,
-          "meter": "17/16",
+          "meter": "19/16",
           "picking_pattern": [
             {
+              // 3223333
               "repetitions": 1,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,0,16,0,16,0,8,8,0,8,8,0,8,8,0,8,8,0"
             }
           ],
           "fret_hand_pattern": [
@@ -1355,7 +1650,7 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 17,
+              "repetitions": 19,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1432,19 +1727,215 @@
           "meter": "15/16",
           "picking_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 8,
+              "repetitions": 1,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 120,
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,0,0,8,8"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "15/16",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,0,8,8,0,8,8,0,8,8,8,8,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 15,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1465,19 +1956,47 @@
           "meter": "4/4",
           "picking_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 7,
+              "pattern": "4,4,4,4,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 8,
+              "repetitions": 7,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 128,
+              "repetitions": 112,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,4,4,4,4,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 112,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1494,23 +2013,51 @@
       "Section": "Interlude2b",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "4/4",
           "picking_pattern": [
             {
-              "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "repetitions": 3,
+              "pattern": "4,4,4,4,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 8,
+              "repetitions": 3,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 128,
+              "repetitions": 48,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {
+          "tempo": 160,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,4,4,4,4,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 112,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1527,78 +2074,12 @@
       "Section": "Interlude2GtrSolo",
       "temporal_mappings": [
         {
-          "tempo": 160,
-          "meter": "4/4",
-          "picking_pattern": [
-            {
-              "repetitions": 16,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            }
-          ],
-          "fret_hand_pattern": [
-            {
-              "repetitions": 16,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            }
-          ],
-          "lighting_pattern": [
-            {
-              "repetitions": 256,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Section": "Interlude2VoxEntry",
-      "temporal_mappings": [
-        {
-          "tempo": 160,
-          "meter": "4/4",
-          "picking_pattern": [
-            {
-              "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            }
-          ],
-          "fret_hand_pattern": [
-            {
-              "repetitions": 12,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-            }
-          ],
-          "lighting_pattern": [
-            {
-              "repetitions": 192,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Section": "Interlude2VoxEntry-2",
-      "temporal_mappings": [
-        {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "4/4",
           "picking_pattern": [
             {
               "repetitions": 8,
-              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+              "pattern": "8,8,8,8,8,8,8,8,8,8,8,8,16,16,8,8"
             }
           ],
           "fret_hand_pattern": [
@@ -1623,26 +2104,110 @@
       ]
     },
     {
-      "Section": "BreakFreeVox",
+      "Section": "Interlude2VoxEntry",
       "temporal_mappings": [
-        {
-          "tempo": 160,
+        {       //6
+          "tempo": 80,
           "meter": "4/4",
           "picking_pattern": [
             {
-              "repetitions": 10,
+              "repetitions": 2,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 10,
+              "repetitions": 2,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 160,
+              "repetitions": 32,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {       //6
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,8,8,8,8,8,8,8,8,16,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {       //6
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,4,4,4,4,0,0,4,4,4,4,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {       //6
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 2,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 2,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 32,
               "pixel0": "0",
               "pixel1": "0",
               "pixel2": "0",
@@ -1656,6 +2221,240 @@
       ]
     },
     {
+      "Section": "Interlude2VoxEntry-2",
+      "temporal_mappings": [
+        {       //6
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 2,
+              "pattern": "8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 2,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 32,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {       //6
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "8,8,8,8,8,8,8,8,8,8,16,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {       //6
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,4,4,4,4,0,0,0,0,0,0,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Section": "BreakFreeVox",
+      "temporal_mappings": [
+        {  //5
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "16,16,16,16,4,4,4,4,16,16,16,16,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {  //5
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "16,16,16,16,4,4,4,4,4,4,4,4,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {  //5
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "16,16,16,16,4,4,4,4,16,16,16,16,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {  //5
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,4,4,4,4,4,4,4,4,8,8,4,4,4,4"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        },
+        {  //5
+          "tempo": 80,
+          "meter": "4/4",
+          "picking_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "fret_hand_pattern": [
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
+            }
+          ],
+          "lighting_pattern": [
+            {
+              "repetitions": 16,
+              "pixel0": "0",
+              "pixel1": "0",
+              "pixel2": "0",
+              "pixel3": "0",
+              "pixel4": "0",
+              "pixel5": "0",
+              "pixel6": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {  // HERE!
       "Section": "Bridge Finale",
       "temporal_mappings": [
         {
