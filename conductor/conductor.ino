@@ -25,6 +25,8 @@ uint32_t violet = medallion.Color(125, 0, 255);
 uint32_t red = medallion.Color(255, 0, 0);
 uint32_t fireRed = medallion.Color(255, 30, 15);
 uint32_t gold = medallion.Color(175, 100, 0);
+uint32_t green = medallion.Color(0, 255, 0);
+uint32_t lightGreen = medallion.Color(100, 255, 100);
 
 uint32_t off = medallion.Color(0, 0, 0);
 
@@ -67,6 +69,10 @@ uint32_t getPixelColor(unsigned char pixelNumber) {
             return fireRed;
         case 8:
             return gold;
+        case 9:
+            return green
+        case 10:
+            return lightGreen
         default:
             return off;
     }

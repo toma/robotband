@@ -74,6 +74,7 @@ if __FILE__ == $0
   if ARGV.length != 2
     puts "requires two arguments"
     puts "piano_roll_generator.rb <outputFile> <jsonFile>"
+    puts "ex. ./piano_roll_generator.rb ../data/pianoRolls/LEADGUIT/VERSEV.csv ../data/template/VerseV_Axeman1.json"
     exit
   end
 
