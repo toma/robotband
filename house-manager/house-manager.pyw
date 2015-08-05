@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from Tkinter import Tk, Listbox, BOTH, END, X
-from ttk import Frame, Button, Style
+from ttk import Frame, Button, Style, Entry
 
 import os
 
@@ -29,14 +29,20 @@ class HouseManager(Frame):
 
     musicianList = Listbox(self)
 
+    self.commandInput = Entry(self)
+    commandSend = Button(self, text="Send Command",
+        command=self.sendCommand)
 
-    nextSongButton = Button(self, text="Stop Song", 
+    stopSongButton = Button(self, text="Stop Song", 
         command=self.stopSong)
 
     self.pack(fill=BOTH, expand=1)
-    nextSongButton.pack(side="bottom", fill=X)
-    musicianList.pack(side="top", fill="both", expand=True)
-    songList.pack(side="top", fill="both", expand=True)
+    stopSongButton.pack(side="bottom", fill=X)
+    commandSend.pack(side="bottom", fill=X)
+    self.commandInput.pack(side="bottom", fill=X)
+    songList.pack(side="bottom", fill="both", expand=True)
+    musicianList.pack(side="bottom", fill="both", expand=True)
+    
 
     for item in os.listdir(WAVE_PATH):
       songList.insert(END, item.rsplit('.', 1)[0])
@@ -62,8 +68,10 @@ class HouseManager(Frame):
     self.sendCommand('STOP')
     self.stopMusic
 
-  def sendCommand(self, command):
-    print "Send play song command for " + command
+  def sendCommand(self, command = None):
+    if command is None:
+      command = self.commandInput.get()
+    print "Send command for " + command
     for musician in musicians:
       musician.write(command + '\n')
 
