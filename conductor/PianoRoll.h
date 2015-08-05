@@ -12,6 +12,7 @@ public:
 	unsigned char* getStateSet();
 	void stop();
 	void overrideBPM(int bpm);
+    void overrideLightColor(int lightColor);
 private:
     int overriddenBPM = 0;
     unsigned char index = 0;
@@ -23,6 +24,7 @@ private:
     bool playingSong = false;
     unsigned char pixelColor[7];
     int getValueFromString(String data, char separator, int index);
+    int overriddenLightColor = -1;
 };
 
 #endif

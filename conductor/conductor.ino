@@ -23,11 +23,12 @@ uint32_t brightTeal = medallion.Color(0, 255, 255);
 uint32_t purple = medallion.Color(255, 0, 255);
 uint32_t violet = medallion.Color(125, 0, 255);
 uint32_t red = medallion.Color(255, 0, 0);
-uint32_t fireRed = medallion.Color(255, 30, 15);
+uint32_t fireRed = medallion.Color(10, 0, 0);
 uint32_t gold = medallion.Color(175, 100, 0);
 uint32_t darkGreen = medallion.Color(0, 255, 0);
 uint32_t lightGreen = medallion.Color(25, 255, 25);
 uint32_t green = medallion.Color(50, 255, 50);
+uint32_t brightWhite = medallion.Color(255,255,255);
 
 
 uint32_t off = medallion.Color(0, 0, 0);
@@ -72,11 +73,13 @@ uint32_t getPixelColor(unsigned char pixelNumber) {
         case 8:
             return gold;
         case 9:
-            return darkGreen
+            return darkGreen;
         case 10:
-            return green
+            return green;
         case 11:
-            return lightGreen
+            return lightGreen;
+        case 12:
+            return brightWhite;
         default:
             return off;
     }
@@ -103,16 +106,26 @@ void loop() {
 
     if (Serial.available() > 0) {
         inputString = Serial.readStringUntil('\n');
-        if (inputString.equalsIgnoreCase("STOP")) {
+        if (inputString.substring(0, 4).equals("STOP")) {
+            if (inputString.indexOf(":") != -1) {
+                String lightColor = inputString.substring(inputString.lastIndexOf(":") + 1, inputString.length());
+                Serial.println("Parsed LightColor: " + lightColor);
+                pianoRoll.overrideLightColor(lightColor.toInt());
+            } else {
+                pianoRoll.overrideLightColor(0);
+            }
             pianoRoll.stop();
         } else if (inputString.equalsIgnoreCase("WHOAMI")) {
             Serial.println(musician->getFolderName());
         } else if (inputString.substring(0, 3).equals("HSF")) {
-            //Set BPM in piano roll from HSFXX, where XXX is the BPM and play HSF.CSV
+            //Set BPM in piano roll from HSFXX:Y, where XXX is the BPM and YY is the light color and play HSF.CSV
             Serial.println("HSF!");
-            Serial.print("BPM: ");
-            String bpm = inputString.substring(3, inputString.length());
+            String bpm = inputString.substring(3, inputString.lastIndexOf(":"));
+            Serial.print("Parsed BPM: " + bpm);
+            String lightColor = inputString.substring(inputString.lastIndexOf(":") + 1, inputString.length());
+            Serial.println("Parsed LightColor: " + lightColor);
             pianoRoll.overrideBPM(bpm.toInt());
+            pianoRoll.overrideLightColor(lightColor.toInt());
             pianoRoll.loadSong("HSF.CSV");
         } else {
             pianoRoll.loadSong(inputString);
