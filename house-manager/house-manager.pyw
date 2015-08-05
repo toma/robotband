@@ -71,6 +71,8 @@ class HouseManager(Frame):
   def sendCommand(self, command = None):
     if command is None:
       command = self.commandInput.get()
+      self.commandInput.delete(0, END)
+
     print "Send command for " + command
     for musician in musicians:
       musician.write(command + '\n')
