@@ -18,6 +18,7 @@ class PianoRollGenerator
     pianoRollArray = []
 
     instructionSet["SongInstructionSequence"].each do |section|
+      sixteenthNotes = 0
       puts "Parsing Section #{section["Section"]}"
 
       section['temporal_mappings'].each do |mapping|
@@ -49,9 +50,11 @@ class PianoRollGenerator
           pixel5_instructions.concat repeatSection(pattern['pixel5'], pattern['repetitions'])
           pixel6_instructions.concat repeatSection(pattern['pixel6'], pattern['repetitions'])
         end
+        sixteenthNotes += pick_instructions.length
         tempoArray = Array.new(pick_instructions.length, mapping['tempo'])
         pianoRollArray.concat tempoArray.zip(pick_instructions, fret_instructions, pixel0_instructions, pixel1_instructions, pixel2_instructions, pixel3_instructions, pixel4_instructions, pixel5_instructions, pixel6_instructions)
       end
+      puts sixteenthNotes
     end
     pianoRollArray
   end
@@ -74,7 +77,12 @@ if __FILE__ == $0
   if ARGV.length != 2
     puts "requires two arguments"
     puts "piano_roll_generator.rb <outputFile> <jsonFile>"
-    puts "ex. ./piano_roll_generator.rb ../data/pianoRolls/LEADGUIT/VERSEV.csv ../data/template/VerseV_Axeman1.json"
+    puts "ex. ./piano_roll_generator.rb ../data/pianoRolls/LEADGUIT/INVDIS.csv ../data/template/VerseV_Axeman1.json"
+    puts "    ./piano_roll_generator.rb ../data/pianoRolls/RHYTHMG/INVDIS.csv ../data/template/InvocationDisentangledCombined.json"
+    puts ""
+    puts "then run"
+    puts "./copyFiles.sh"
+    puts "to copy the files to SD card"
     exit
   end
 

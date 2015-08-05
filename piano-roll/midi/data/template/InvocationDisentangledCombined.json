@@ -20,14 +20,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 6,
+              "pixel0": "9,10,11,10",
+              "pixel1": "9,10,11,10",
+              "pixel2": "9,10,11,10",
+              "pixel3": "9,10,11,10",
+              "pixel4": "9,10,11,10",
+              "pixel5": "9,10,11,10",
+              "pixel6": "9,10,11,10"
             }
           ]
         }
@@ -53,14 +53,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 192,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 48,
+              "pixel0": "9,10,11,10",
+              "pixel1": "9,10,11,10",
+              "pixel2": "9,10,11,10",
+              "pixel3": "9,10,11,10",
+              "pixel4": "9,10,11,10",
+              "pixel5": "9,10,11,10",
+              "pixel6": "9,10,11,10"
             }
           ]
         }
@@ -86,14 +86,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 132,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 33,
+              "pixel0": "9,10,11,10",
+              "pixel1": "9,10,11,10",
+              "pixel2": "9,10,11,10",
+              "pixel3": "9,10,11,10",
+              "pixel4": "9,10,11,10",
+              "pixel5": "9,10,11,10",
+              "pixel6": "9,10,11,10"
             }
           ]
         }
@@ -119,14 +119,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 96,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 24,
+              "pixel0": "9,10,11,10",
+              "pixel1": "9,10,11,10",
+              "pixel2": "9,10,11,10",
+              "pixel3": "9,10,11,10",
+              "pixel4": "9,10,11,10",
+              "pixel5": "9,10,11,10",
+              "pixel6": "9,10,11,10"
             }
           ]
         }
@@ -152,14 +152,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 120,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 30,
+              "pixel0": "9,10,11,10",
+              "pixel1": "9,10,11,10",
+              "pixel2": "9,10,11,10",
+              "pixel3": "9,10,11,10",
+              "pixel4": "9,10,11,10",
+              "pixel5": "9,10,11,10",
+              "pixel6": "9,10,11,10"
             }
           ]
         }
@@ -185,14 +185,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 96,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 24,
+              "pixel0": "9,10,11,10",
+              "pixel1": "9,10,11,10",
+              "pixel2": "9,10,11,10",
+              "pixel3": "9,10,11,10",
+              "pixel4": "9,10,11,10",
+              "pixel5": "9,10,11,10",
+              "pixel6": "9,10,11,10"
             }
           ]
         }
@@ -206,77 +206,77 @@
           "meter": "3/4",
           "picking_pattern": [
             {
-              "repetitions": 13,
+              "repetitions": 7,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            },
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0,0,0,0,0"
             }
           ],
           "fret_hand_pattern": [
             {
-              "repetitions": 13,
+              "repetitions": 7,
               "pattern": "0,0,0,0,0,0,0,0,0,0,0,0"
+            },
+            {
+              "repetitions": 1,
+              "pattern": "0,0,0,0"
             }
           ],
           "lighting_pattern": [
             {
-              "repetitions": 156,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 25,
+              "pixel0": "9,10,11,10",
+              "pixel1": "9,10,11,10",
+              "pixel2": "9,10,11,10",
+              "pixel3": "9,10,11,10",
+              "pixel4": "9,10,11,10",
+              "pixel5": "9,10,11,10",
+              "pixel6": "9,10,11,10"
             }
           ]
         }
       ]
     },
-//    {
-//      "Section": "CountIn",
-//      "temporal_mappings": [
-//        {
-//          "tempo": 160,
-//          "meter": "4/4",
-//          "picking_pattern": [
-//            {
-//              "repetitions": 3,
-//              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-//            },
-//            {
-//              "repetitions": 1,
-//              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0"
-//            }
-//          ],
-//          "fret_hand_pattern": [
-//            {
-//              "repetitions": 1,
-//              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0"
-//            },
-//            {
-//              "repetitions": 1,
-//              "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"
-//            }
-//          ],
-//          "lighting_pattern": [
-//            {
-//              "repetitions": 64,
-//              "pixel0": "0",
-//              "pixel1": "0",
-//              "pixel2": "0",
-//              "pixel3": "0",
-//              "pixel4": "0",
-//              "pixel5": "0",
-//              "pixel6": "0"
-//            }
-//          ]
-//        }
-//      ]
-//    },
+   {
+     "Section": "Feedback",
+     "temporal_mappings": [
+       {
+         "tempo": 91,
+         "meter": "3/4",
+         "picking_pattern": [
+           {
+             "repetitions": 5,
+             "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+           }
+         ],
+         "fret_hand_pattern": [
+           {
+             "repetitions": 5,
+             "pattern": "0,0,0,0,0,0,0,0,0,0,0,0,0"
+           }
+         ],
+         "lighting_pattern": [
+           {
+             "repetitions": 30,
+             "pixel0": "6,12",
+             "pixel1": "6,12",
+             "pixel2": "6,12",
+             "pixel3": "6,12",
+             "pixel4": "6,12",
+             "pixel5": "6,12",
+             "pixel6": "6,12"
+           }
+         ]
+       }
+     ]
+  },
     {
       "Section": "IntroPickup",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -293,18 +293,18 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel2": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "17/16",
           "picking_pattern": [
             {
@@ -320,19 +320,29 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 17,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 8,
+              "pixel0": "6,12",
+              "pixel1": "6,12",
+              "pixel2": "6,12",
+              "pixel3": "6,12",
+              "pixel4": "6,12",
+              "pixel5": "6,12",
+              "pixel6": "6,12"
+            },
+            {
+              "repetitions": 1,
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -349,18 +359,18 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "17/16",
           "picking_pattern": [
             {
@@ -377,13 +387,13 @@
           "lighting_pattern": [
             {
               "repetitions": 17,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -393,7 +403,7 @@
       "Section": "1st Verse",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -411,18 +421,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "34/16",
           "picking_pattern": [
             {
@@ -440,18 +450,18 @@
           "lighting_pattern": [
             {
               "repetitions": 34,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "29/16",
           "picking_pattern": [
             {
@@ -469,18 +479,18 @@
           "lighting_pattern": [
             {
               "repetitions": 29,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -498,18 +508,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "34/16",
           "picking_pattern": [
             {
@@ -527,18 +537,18 @@
           "lighting_pattern": [
             {
               "repetitions": 34,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "29/16",
           "picking_pattern": [
             {
@@ -556,13 +566,13 @@
           "lighting_pattern": [
             {
               "repetitions": 29,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -573,7 +583,7 @@
       "temporal_mappings": [
         {
           // 33322 (32232232) 33322 (32)
-          "tempo": 160,
+          "tempo": 80,
           "meter": "13/16",
           "picking_pattern": [
             {
@@ -590,19 +600,19 @@
           "lighting_pattern": [
             {
               "repetitions": 13,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
           // 33322 (32232232) 33322 (32)
-          "tempo": 160,
+          "tempo": 80,
           "meter": "19/16",
           "picking_pattern": [
             {
@@ -619,19 +629,19 @@
           "lighting_pattern": [
             {
               "repetitions": 19,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
           // 33322 (32232232) 33322 (3)
-          "tempo": 160,
+          "tempo": 80,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -648,13 +658,13 @@
           "lighting_pattern": [
             {
               "repetitions": 16,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -667,7 +677,7 @@
       // CADENCE REST 23223
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -684,18 +694,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -713,18 +723,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -742,18 +752,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "19/16",
           "picking_pattern": [
             {
@@ -771,18 +781,18 @@
           "lighting_pattern": [
             {
               "repetitions": 19,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "10/16",
           "picking_pattern": [
             {
@@ -799,13 +809,13 @@
           "lighting_pattern": [
             {
               "repetitions": 10,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -815,7 +825,7 @@
       "Section": "LittleBoy-IB",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -832,18 +842,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -861,18 +871,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -890,18 +900,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "19/16",
           "picking_pattern": [
             {
@@ -919,18 +929,18 @@
           "lighting_pattern": [
             {
               "repetitions": 19,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "10/16",
           "picking_pattern": [
             {
@@ -947,18 +957,18 @@
           "lighting_pattern": [
             {
               "repetitions": 10,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -975,13 +985,13 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -991,7 +1001,7 @@
       "Section": "Chorus1",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "15/16",
           "picking_pattern": [
             {
@@ -1064,13 +1074,13 @@
           "lighting_pattern": [
             {
               "repetitions": 120,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1081,7 +1091,7 @@
       "temporal_mappings": [
         {
           // 32232 32232
-          "tempo": 160,
+          "tempo": 80,
           "meter": "6/4",
           "picking_pattern": [
             {
@@ -1099,13 +1109,13 @@
           "lighting_pattern": [
             {
               "repetitions": 192,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1115,7 +1125,7 @@
       "Section": "Interlude-IClimax",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "6/4",
           "picking_pattern": [
             {
@@ -1140,18 +1150,18 @@
           "lighting_pattern": [
             {
               "repetitions": 144,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -1168,19 +1178,19 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
           //  3223232
-          "tempo": 160,
+          "tempo": 80,
           "meter": "17/16",
           "picking_pattern": [
             {
@@ -1197,18 +1207,18 @@
           "lighting_pattern": [
             {
               "repetitions": 19,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -1225,18 +1235,18 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "15/16",
           "picking_pattern": [
             {
@@ -1253,13 +1263,13 @@
           "lighting_pattern": [
             {
               "repetitions": 15,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1269,7 +1279,7 @@
       "Section": "Verse 2",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -1287,18 +1297,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "34/16",
           "picking_pattern": [
             {
@@ -1316,18 +1326,18 @@
           "lighting_pattern": [
             {
               "repetitions": 34,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "29/16",
           "picking_pattern": [
             {
@@ -1345,18 +1355,18 @@
           "lighting_pattern": [
             {
               "repetitions": 29,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -1374,18 +1384,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "34/16",
           "picking_pattern": [
             {
@@ -1403,18 +1413,18 @@
           "lighting_pattern": [
             {
               "repetitions": 34,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "29/16",
           "picking_pattern": [
             {
@@ -1432,13 +1442,13 @@
           "lighting_pattern": [
             {
               "repetitions": 29,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1449,7 +1459,7 @@
       "temporal_mappings": [
         {
           // 33322 (32232232) 33322 (32)
-          "tempo": 160,
+          "tempo": 80,
           "meter": "13/16",
           "picking_pattern": [
             {
@@ -1466,19 +1476,19 @@
           "lighting_pattern": [
             {
               "repetitions": 13,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
           // 33322 (32232232) 33322 (32)
-          "tempo": 160,
+          "tempo": 80,
           "meter": "19/16",
           "picking_pattern": [
             {
@@ -1495,19 +1505,19 @@
           "lighting_pattern": [
             {
               "repetitions": 19,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
           // 33322 (32232232) 33322 (32)
-          "tempo": 160,
+          "tempo": 80,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -1524,13 +1534,13 @@
           "lighting_pattern": [
             {
               "repetitions": 16,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1543,7 +1553,7 @@
       // CADENCE REST 23223
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -1560,18 +1570,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -1589,18 +1599,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -1618,18 +1628,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "19/16",
           "picking_pattern": [
             {
@@ -1647,18 +1657,18 @@
           "lighting_pattern": [
             {
               "repetitions": 19,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -1675,13 +1685,13 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1691,7 +1701,7 @@
       "Section": "LittleBoy-IIB",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -1708,18 +1718,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "24/16",
           "picking_pattern": [
             {
@@ -1737,18 +1747,18 @@
           "lighting_pattern": [
             {
               "repetitions": 24,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "14/16",
           "picking_pattern": [
             {
@@ -1766,18 +1776,18 @@
           "lighting_pattern": [
             {
               "repetitions": 14,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "19/16",
           "picking_pattern": [
             {
@@ -1795,18 +1805,18 @@
           "lighting_pattern": [
             {
               "repetitions": 19,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "10/16",
           "picking_pattern": [
             {
@@ -1823,18 +1833,18 @@
           "lighting_pattern": [
             {
               "repetitions": 10,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -1851,13 +1861,13 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1867,7 +1877,7 @@
       "Section": "Chorus2",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "15/16",
           "picking_pattern": [
             {
@@ -1939,14 +1949,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 15,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 119,
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -1981,13 +1991,13 @@
           "lighting_pattern": [
             {
               "repetitions": 64,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "7",
+              "pixel1": "7",
+              "pixel2": "7",
+              "pixel3": "7",
+              "pixel4": "7",
+              "pixel5": "7",
+              "pixel6": "7"
             }
           ]
         }
@@ -2021,14 +2031,14 @@
           ],
           "lighting_pattern": [
             {
-              "repetitions": 48,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "repetitions": 63,
+              "pixel0": "7",
+              "pixel1": "7",
+              "pixel2": "7",
+              "pixel3": "7",
+              "pixel4": "7",
+              "pixel5": "7",
+              "pixel6": "7"
             }
           ]
         }
@@ -2055,13 +2065,13 @@
           "lighting_pattern": [
             {
               "repetitions": 128,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "7",
+              "pixel1": "7",
+              "pixel2": "7",
+              "pixel3": "7",
+              "pixel4": "7",
+              "pixel5": "7",
+              "pixel6": "7"
             }
           ]
         }
@@ -2112,13 +2122,13 @@
           "lighting_pattern": [
             {
               "repetitions": 96,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "7",
+              "pixel1": "7",
+              "pixel2": "7",
+              "pixel3": "7",
+              "pixel4": "7",
+              "pixel5": "7",
+              "pixel6": "7"
             }
           ]
         }
@@ -2161,13 +2171,13 @@
           "lighting_pattern": [
             {
               "repetitions": 64,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "7",
+              "pixel1": "7",
+              "pixel2": "7",
+              "pixel3": "7",
+              "pixel4": "7",
+              "pixel5": "7",
+              "pixel6": "7"
             }
           ]
         }
@@ -2226,13 +2236,13 @@
           "lighting_pattern": [
             {
               "repetitions": 80,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "7",
+              "pixel1": "7",
+              "pixel2": "7",
+              "pixel3": "7",
+              "pixel4": "7",
+              "pixel5": "7",
+              "pixel6": "7"
             }
           ]
         }
@@ -2242,7 +2252,7 @@
       "Section": "Bridge Finale",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "15/16",
           "picking_pattern": [
             {
@@ -2259,18 +2269,18 @@
           "lighting_pattern": [
             {
               "repetitions": 45,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "15/16",
           "picking_pattern": [
             {
@@ -2287,13 +2297,13 @@
           "lighting_pattern": [
             {
               "repetitions": 15,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -2303,7 +2313,7 @@
       "Section": "Final Chorus",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "15/16",
           "picking_pattern": [
             {
@@ -2376,13 +2386,13 @@
           "lighting_pattern": [
             {
               "repetitions": 120,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -2393,7 +2403,7 @@
       // 32232 (3223 232) (32232 32232 2) 12+17+24 + 2
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "12/16",
           "picking_pattern": [
             {
@@ -2410,18 +2420,18 @@
           "lighting_pattern": [
             {
               "repetitions": 12,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "17/16",
           "picking_pattern": [
             {
@@ -2438,18 +2448,18 @@
           "lighting_pattern": [
             {
               "repetitions": 17,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         },
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "26/16",
           "picking_pattern": [
             {
@@ -2467,13 +2477,13 @@
           "lighting_pattern": [
             {
               "repetitions": 26,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
@@ -2483,7 +2493,7 @@
       "Section": "Last Hit",
       "temporal_mappings": [
         {
-          "tempo": 160,
+          "tempo": 80,
           "meter": "4/4",
           "picking_pattern": [
             {
@@ -2500,13 +2510,13 @@
           "lighting_pattern": [
             {
               "repetitions": 16,
-              "pixel0": "0",
-              "pixel1": "0",
-              "pixel2": "0",
-              "pixel3": "0",
-              "pixel4": "0",
-              "pixel5": "0",
-              "pixel6": "0"
+              "pixel0": "6",
+              "pixel1": "6",
+              "pixel2": "6",
+              "pixel3": "6",
+              "pixel4": "6",
+              "pixel5": "6",
+              "pixel6": "6"
             }
           ]
         }
