@@ -48,7 +48,7 @@ class HouseManager(Frame):
       songList.insert(END, item.rsplit('.', 1)[0])
 
     for tty in os.listdir('/dev/'):
-      if tty.startswith('tty.usbmodem'):
+      if tty.startswith('tty.usbmodem') or tty.startswith('cu.wchusbserial'):
         connection = serial.Serial('/dev/' + tty, 9600)
         connection.readline()
         connection.write('WHOAMI\n')
