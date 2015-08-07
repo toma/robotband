@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from Tkinter import Tk, Listbox, BOTH, END, X
-from ttk import Frame, Button, Style, Entry
+from ttk import Frame, Button, Style, Entry, Label
 
 import os
 
@@ -11,6 +11,10 @@ import serial
 WAVE_PATH = os.path.expanduser('~') + "/wav/"
 
 musicians = []
+
+colors =  ['off', 'dimWhite', 'darkTeal', 'brightTeal', 
+           'purple', 'violet', 'red', 'fireRed', 'gold',
+           'darkGreen', 'green', 'lightGreen', 'brightWhite']
 
 
 class HouseManager(Frame):
@@ -36,16 +40,23 @@ class HouseManager(Frame):
     stopSongButton = Button(self, text="Stop Song", 
         command=self.stopSong)
 
+    self.colorList = Listbox(self)
+
     self.pack(fill=BOTH, expand=1)
     stopSongButton.pack(side="bottom", fill=X)
     commandSend.pack(side="bottom", fill=X)
     self.commandInput.pack(side="bottom", fill=X)
-    songList.pack(side="bottom", fill="both", expand=True)
+    # songList.pack(side="bottom", fill="both", expand=True)
+    self.colorList.pack(side="bottom", fill="both", expand=True)
     musicianList.pack(side="bottom", fill="both", expand=True)
-    
+
+    self.commandInput.bind('<Return>', self.enterKeypressed)  
 
     for item in os.listdir(WAVE_PATH):
       songList.insert(END, item.rsplit('.', 1)[0])
+
+    for item in colors:
+      self.colorList.insert(END, item)
 
     for tty in os.listdir('/dev/'):
       if tty.startswith('tty.usbmodem') or tty.startswith('cu.wchusbserial'):
@@ -73,9 +84,12 @@ class HouseManager(Frame):
       command = self.commandInput.get()
       self.commandInput.delete(0, END)
 
-    print "Send command for " + command
+    color = colors.index(self.colorList.get(self.colorList.curselection()[0]))
+    toSend = "%s:%i" % (command, color)
+
+    print "Send command %s" % toSend
     for musician in musicians:
-      musician.write(command + '\n')
+      musician.write("%s\n" % toSend)
 
   def playWav(self, songTitle):
     # print "Starting the song " + songTitle
@@ -85,9 +99,14 @@ class HouseManager(Frame):
   def stopMusic():
     print "Stop the music!"
 
+  def enterKeypressed(self, arg2):
+    print("Enter key pressed!")
+    self.sendCommand()
+  
+
 def main():
   root = Tk()
-  root.geometry("250x500+300+300")
+  root.geometry("250x700+300+300")
   app = HouseManager(root)
   root.mainloop()  
 
