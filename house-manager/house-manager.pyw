@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-from Tkinter import Tk, Listbox, BOTH, END, X
-from ttk import Frame, Button, Style, Entry, Label
+from Tkinter import * #Tk, Listbox, BOTH, END, X
+from ttk import * #Frame, Button, Style, Entry, Label, Radiobutton
 
 import os
 
@@ -16,6 +16,10 @@ colors =  ['off', 'dimWhite', 'darkTeal', 'brightTeal',
            'purple', 'violet', 'red', 'fireRed', 'gold',
            'darkGreen', 'green', 'lightGreen', 'brightWhite']
 
+bpms = [123, 98, 96, 91, 80, 75, 74, 72, 60]
+
+
+
 
 class HouseManager(Frame):
   def __init__(self, parent):
@@ -24,6 +28,9 @@ class HouseManager(Frame):
     self.initUI()
   
   def initUI(self):
+    self.colorVal = StringVar()
+    self.bpmVal = IntVar()
+
     self.parent.title("House Manager")
     self.style = Style()
     self.style.theme_use("default")
@@ -41,13 +48,21 @@ class HouseManager(Frame):
         command=self.stopSong)
 
     self.colorList = Listbox(self)
-
+    
     self.pack(fill=BOTH, expand=1)
     stopSongButton.pack(side="bottom", fill=X)
     commandSend.pack(side="bottom", fill=X)
-    self.commandInput.pack(side="bottom", fill=X)
+    
+    # self.commandInput.pack(side="bottom", fill=X)
     # songList.pack(side="bottom", fill="both", expand=True)
-    self.colorList.pack(side="bottom", fill="both", expand=True)
+    
+    for bpm in bpms:
+      Radiobutton(self, text=bpm, variable=self.bpmVal, value=bpm).pack(side="bottom")
+
+    for color in colors:
+      Radiobutton(self, text=color, variable=self.colorVal, value=color).pack(side="bottom")
+
+    # self.colorList.pack(side="bottom", fill="both", expand=True)
     musicianList.pack(side="bottom", fill="both", expand=True)
 
     self.commandInput.bind('<Return>', self.enterKeypressed)  
@@ -55,8 +70,9 @@ class HouseManager(Frame):
     for item in os.listdir(WAVE_PATH):
       songList.insert(END, item.rsplit('.', 1)[0])
 
-    for item in colors:
-      self.colorList.insert(END, item)
+    for color in colors:
+      self.colorList.insert(END, color)
+
 
     for tty in os.listdir('/dev/'):
       if tty.startswith('tty.usbmodem') or tty.startswith('cu.wchusbserial'):
@@ -81,10 +97,9 @@ class HouseManager(Frame):
 
   def sendCommand(self, command = None):
     if command is None:
-      command = self.commandInput.get()
-      self.commandInput.delete(0, END)
+      command = "HSF%d" % self.bpmVal.get()
 
-    color = colors.index(self.colorList.get(self.colorList.curselection()[0]))
+    color = colors.index(self.colorVal.get())
     toSend = "%s:%i" % (command, color)
 
     print "Send command %s" % toSend
